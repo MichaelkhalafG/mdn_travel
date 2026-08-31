@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -28,8 +28,8 @@ model Service {
   slug    String   @unique
   nameEn  String
   nameAr  String
-  descEn  String
-  descAr  String
+  descEn  String @db.Text
+  descAr  String @db.Text
   image   String
   order   Int
   tickets Ticket[]
@@ -44,9 +44,9 @@ model Ticket {
   phone         String
   email         String?
   contactMethod ContactMethod
-  details       String
+  details       String        @db.Text
   status        TicketStatus  @default(RECEIVED)
-  adminNotes    String?
+  adminNotes    String?       @db.Text
   statusEvents  StatusEvent[]
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt

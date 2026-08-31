@@ -7,7 +7,7 @@ Users pick a service → open a request (ticket) → admin handles everything of
 
 - Next.js 15 (App Router) + TypeScript — one project for public site AND admin dashboard
 - Tailwind CSS v4 (theme via CSS variables in globals.css, same approach as STACKMART — no tailwind.config)
-- Prisma + PostgreSQL
+- Prisma + MySQL (Hostinger managed in production)
 - Auth.js (NextAuth) credentials — ADMIN ONLY. No public user auth, ever.
 - next-intl for i18n
 - Server Actions for all mutations (no separate API routes unless necessary)
@@ -153,4 +153,5 @@ Tracking rule: ticket lookup requires BOTH referenceCode AND matching phone. Nev
 - Respect `prefers-reduced-motion` for all animations.
 - Seed script: 9 services + 1 admin (from env ADMIN_EMAIL/ADMIN_PASSWORD) + ~10 fake tickets in mixed statuses.
 - Env vars documented in `.env.example`. Never commit `.env`.
+- Deployment: Hostinger Node.js Web Apps via GitHub integration. next.config output: "standalone".
 - No payment integration, no user accounts, no service CRUD — out of scope for v1. Don't build them.
