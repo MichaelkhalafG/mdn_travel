@@ -21,6 +21,11 @@
   --border-on-dark: rgba(255, 255, 255, 0.06);
   --radius: 6px;              /* EVERYWHERE. Uniform. No other radii. */
 
+  /* Neutral shades from the design file (design/template.html, 01 — DESIGN SYSTEM) */
+  --mono-label: #8a94a3;          /* mono section labels + muted meta, both surfaces */
+  --fg-on-light-muted: #57606a;   /* muted text on light surfaces */
+  --border-light-subtle: #eaeef2; /* table row hairlines on light surfaces */
+
   /* Shadows: large soft navy-tinted on marketing surfaces; flat in admin UI */
   --shadow-marketing: 0 40px 90px -30px rgba(2, 29, 46, 0.9);
 }
@@ -40,6 +45,9 @@
   --color-canvas-subtle: var(--canvas-subtle);
   --color-border-light: var(--border-light);
   --color-border-on-dark: var(--border-on-dark);
+  --color-mono-label: var(--mono-label);
+  --color-fg-on-light-muted: var(--fg-on-light-muted);
+  --color-border-light-subtle: var(--border-light-subtle);
 
   --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
@@ -80,17 +88,44 @@ html[lang="ar"] :is(h1, h2, h3, h4) {
   font-variant-numeric: tabular-nums;
 }
 
-/* Dark gradient panel: navy gradient + radial royal-blue bloom */
+/* Dark gradient panel: navy gradient + radial royal-blue bloom
+   (geometry from design/template.html "gradient mesh + bloom"; the bloom sits
+   at the inline-end top corner, so it mirrors for RTL) */
 .panel-dark {
   background:
     radial-gradient(
-      600px 320px at 80% -10%,
-      rgba(1, 14, 208, 0.35),
-      transparent 60%
+      120% 140% at 80% 0%,
+      rgba(1, 14, 208, 0.55) 0%,
+      rgba(3, 43, 66, 0) 60%
     ),
     linear-gradient(160deg, #021d2e 0%, #032b42 100%);
   border: 1px solid var(--border-on-dark);
   border-radius: var(--radius);
+}
+
+[dir="rtl"] .panel-dark {
+  background:
+    radial-gradient(
+      120% 140% at 20% 0%,
+      rgba(1, 14, 208, 0.55) 0%,
+      rgba(3, 43, 66, 0) 60%
+    ),
+    linear-gradient(160deg, #021d2e 0%, #032b42 100%);
+}
+
+/* Royal-blue pulse for active states and the current timeline step */
+@keyframes mdn-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(1, 14, 208, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(1, 14, 208, 0);
+  }
+}
+
+.glow-accent {
+  animation: mdn-glow 2.8s ease-in-out infinite;
 }
 
 /* Faint 1px grid motif (white @5%) for dark panels */

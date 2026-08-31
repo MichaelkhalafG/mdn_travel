@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="5934bee4-da4b-4f14-a366-41507270dbea"></script>
+
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("72dc9a04-8576-4461-b02c-398bc3eba059") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("7cea3bc7-3f96-4d93-8028-caaefd912a86") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("01271b20-0578-4707-93e9-101d74bdfb4a") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("239ffc33-6992-4ee0-9c91-f6ed33239753") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("bf3d7403-9554-4cad-b15c-96735960e1c7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("5ab14096-bcca-42c5-99c7-f74a3cf3602f") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("d08ef96a-4ff4-40a4-9043-e93e5d2b31b9") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("bbb3511f-f1c4-4128-9c84-9eca39fe6c8e") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("2488f22c-2979-471e-a753-9f67c79a98ff") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("a7757f5c-884d-4c86-a114-50e5df4c367c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("2cc9c4f6-a8e8-4d57-b281-d29ddb6da9e5") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("d1f3f188-2305-41c1-8327-3acfe8868f1d") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("9ce3cf2b-c533-4b73-89b5-b6d7c11e8fa7") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("7b0aa279-c954-409e-adaa-dd84c82bdd5f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("39eb8b6e-7062-4fd0-9840-f2d384d2df25") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("6a32aef1-a614-45d2-807e-7bfad260fa28") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("eed4e50a-249a-405e-aa41-b19d56b28443") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("bbff0a2a-d83f-4d56-9899-a01091390319") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("3ec8a354-0685-45fc-af2f-7b12dcb38e2d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("993ed7ce-714b-46f6-976c-632431c8737a") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("bd70efe8-8bc2-4fa6-a59d-57df2702f5b8") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c6dec491-d78c-4328-8f12-f3e94c2cbd33") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("f157684a-2e79-49d7-acd3-d2e7d8496b08") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fa40b7df-ca03-47b0-9bdb-1c057e4fdd03") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("40a83a29-b440-4b40-81fc-abd59b7f9136") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("7246e75a-84fc-4926-9c3e-f9ef4a2b3839") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("e9af066b-ed54-453e-8f85-7e7f76c07919") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("abb4a5e3-ccd9-45cc-8d78-c24bb4e85d9c") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("dd3114b8-18c2-4ccd-89d6-1f4531efd54c") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("4ccb5803-c103-442d-b92a-3a7c0cadcd53") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("309c8ce8-3491-4e4f-ae0e-699171941bcb") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("d39f8ccd-3291-4ba7-8704-25f34776c2bf") format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("eb277264-f7a9-4093-977d-1ae3c2ff3b25") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("1aee16e5-75f2-4e12-8711-e8d57669004c") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("f7851fcf-81f5-4c12-82e9-dcd72c161f31") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("8de36d38-9bea-425f-9368-8e9cddc760d9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("b51888a7-6b43-4c51-821e-983e5d645f88") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("86e0b3b3-d8a7-434c-be18-5fde3e395df3") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("8de36d38-9bea-425f-9368-8e9cddc760d9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("b51888a7-6b43-4c51-821e-983e5d645f88") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("86e0b3b3-d8a7-434c-be18-5fde3e395df3") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("8de36d38-9bea-425f-9368-8e9cddc760d9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("b51888a7-6b43-4c51-821e-983e5d645f88") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("86e0b3b3-d8a7-434c-be18-5fde3e395df3") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("8de36d38-9bea-425f-9368-8e9cddc760d9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("b51888a7-6b43-4c51-821e-983e5d645f88") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("86e0b3b3-d8a7-434c-be18-5fde3e395df3") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  html, body { margin: 0; padding: 0; background: #05090d; }
+  body { font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #dee0ff; text-decoration: none; }
+  a:hover { color: #ffffff; }
+  * { box-sizing: border-box; }
+  @keyframes mdnGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(1, 14, 208, 0.55); } 50% { box-shadow: 0 0 0 8px rgba(1, 14, 208, 0); } }
+</style>
+</helmet>
+<div dir="rtl" style="display: flex; flex-direction: column; align-items: center; gap: 96px; padding: 88px 64px 140px; background: #05090d;">
+
+  <div style="display: flex; flex-direction: column; gap: 18px; width: 1440px;">
+    <div style="display: flex; align-items: baseline; gap: 16px;">
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px; color: #ffffff; letter-spacing: -0.01em;">MDN</span>
+      <span style="width: 1px; height: 22px; background: rgba(255,255,255,0.22);"></span>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; color: #dee0ff; letter-spacing: 0.26em;">TRAVEL</span>
+    </div>
+    <div style="font-size: 34px; font-weight: 300; color: #ffffff; line-height: 1.5;">منصة الحجز والكونسيرج الفاخرة — تصميم عالي الدقة</div>
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6b7bff; letter-spacing: 0.14em;">DESIGN SYSTEM · LANDING · SERVICE · REQUEST · SUCCESS · TRACKING · ADMIN · MOBILE</div>
+  </div>
+
+  <sc-if value="{{ showDesignSystem }}" hint-placeholder-val="{{ true }}">
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">01 — DESIGN SYSTEM</div>
+    <div style="background: linear-gradient(160deg, #021d2e 0%, #032b42 100%); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 64px; display: flex; flex-direction: column; gap: 72px; box-shadow: 0 40px 90px -30px rgba(2,29,46,0.9);">
+
+      <div style="display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.18em;">COLOR TOKENS</div>
+          <div style="font-size: 22px; color: #ffffff; font-weight: 500;">الألوان</div>
+          <div style="font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.9;">الكحلي هو الأساس، والأزرق الملكي لحظات فقط: حلقات التركيز، الحالات النشطة، التوهج الخفيف.</div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+          <div style="border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
+            <div style="height: 84px; background: #021d2e;"></div>
+            <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(255,255,255,0.02);"><span style="font-size: 13px; color: #ffffff;">كحلي مركّز</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">#021D2E</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
+            <div style="height: 84px; background: #032b42;"></div>
+            <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(255,255,255,0.02);"><span style="font-size: 13px; color: #ffffff;">كحلي أساسي</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">#032B42</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
+            <div style="height: 84px; background: #010ed0;"></div>
+            <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(255,255,255,0.02);"><span style="font-size: 13px; color: #ffffff;">أزرق ملكي</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">#010ED0</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
+            <div style="height: 84px; background: linear-gradient(120deg, #010ed0 0%, #6b7bff 100%);"></div>
+            <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(255,255,255,0.02);"><span style="font-size: 13px; color: #ffffff;">تدرّج ملكي</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">#010ED0 → #6B7BFF</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
+            <div style="height: 84px; background: #dee0ff;"></div>
+            <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(255,255,255,0.02);"><span style="font-size: 13px; color: #ffffff;">لافندر</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">#DEE0FF</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
+            <div style="height: 84px; background: #ffffff;"></div>
+            <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(255,255,255,0.02);"><span style="font-size: 13px; color: #ffffff;">أبيض</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">#FFFFFF</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
+            <div style="height: 84px; background: #f6f8fa;"></div>
+            <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(255,255,255,0.02);"><span style="font-size: 13px; color: #ffffff;">سطح فاتح</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">#F6F8FA</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
+            <div style="height: 84px; background: #cf222e;"></div>
+            <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(255,255,255,0.02);"><span style="font-size: 13px; color: #ffffff;">خطر</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">#CF222E</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 1px; background: rgba(255,255,255,0.06);"></div>
+
+      <div style="display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.18em;">TYPE SCALE</div>
+          <div style="font-size: 22px; color: #ffffff; font-weight: 500;">المقياس الطباعي</div>
+          <div style="font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.9;">IBM Plex Sans Arabic للعربية، Space Grotesk للاتينية، IBM Plex Mono للأرقام والرموز المرجعية.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 26px;">
+          <div style="display: flex; align-items: baseline; gap: 28px; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 22px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; width: 150px; flex: none;">DISPLAY / 72 / 300</span>
+            <span style="font-size: 72px; font-weight: 300; color: #ffffff; line-height: 1.25;">رحلتك تبدأ من هنا</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 28px; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 22px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; width: 150px; flex: none;">H1 / 44 / 400</span>
+            <span style="font-size: 44px; font-weight: 400; color: #ffffff; line-height: 1.4;">خدمات الكونسيرج الخاصة</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 28px; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 22px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; width: 150px; flex: none;">H2 / 28 / 500</span>
+            <span style="font-size: 28px; font-weight: 500; color: #ffffff; line-height: 1.5;">حجز وتأجير اليخوت</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 28px; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 22px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; width: 150px; flex: none;">BODY / 17 / 400</span>
+            <span style="font-size: 17px; font-weight: 400; color: rgba(255,255,255,0.72); line-height: 2;">فريقنا يتولّى كل التفاصيل من اللحظة الأولى حتى نهاية الرحلة، بهدوء وبدون ضجيج.</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 28px; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 22px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; width: 150px; flex: none;">CAPTION / 13 / 400</span>
+            <span style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.8;">جميع الطلبات تُراجع يدويًا من فريق الكونسيرج</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 28px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; width: 150px; flex: none;">MONO / 22 / 500</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 500; color: #dee0ff; font-variant-numeric: tabular-nums; letter-spacing: 0.06em;">MDN-8F3K2 · 1,248 · 96%</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 1px; background: rgba(255,255,255,0.06);"></div>
+
+      <div style="display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.18em;">SPACING · RADIUS · BORDERS</div>
+          <div style="font-size: 22px; color: #ffffff; font-weight: 500;">المسافات والحدود</div>
+          <div style="font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.9;">سلّم 4px، نصف قطر 6px في كل مكان، حدود بسماكة 1px فقط.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          <div style="display: flex; align-items: flex-end; gap: 18px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 4px; height: 4px; background: #6b7bff;"></div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">4</span></div>
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 8px; height: 8px; background: #6b7bff;"></div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">8</span></div>
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 16px; height: 16px; background: #6b7bff;"></div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">16</span></div>
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 24px; height: 24px; background: #6b7bff;"></div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">24</span></div>
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 40px; height: 40px; background: #6b7bff;"></div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">40</span></div>
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 64px; height: 64px; background: rgba(107,123,255,0.5);"></div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">64</span></div>
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 96px; height: 96px; background: rgba(107,123,255,0.3);"></div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">96</span></div>
+          </div>
+          <div style="display: flex; gap: 20px;">
+            <div style="flex: 1; height: 96px; border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">hairline · white @5% · r6</div>
+            <div style="flex: 1; height: 96px; background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #57606a;">hairline · #D5D8DC · r6</div>
+            <div style="flex: 1; height: 96px; border-radius: 6px; background: radial-gradient(120% 140% at 20% 0%, rgba(1,14,208,0.55) 0%, rgba(3,43,66,0) 60%), linear-gradient(160deg, #021d2e, #032b42); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #dee0ff;">gradient mesh + bloom</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 1px; background: rgba(255,255,255,0.06);"></div>
+
+      <div style="display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.18em;">COMPONENTS</div>
+          <div style="font-size: 22px; color: #ffffff; font-weight: 500;">المكوّنات</div>
+          <div style="font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.9;">أزرار، حقول، شرائح، شارات، خط زمني، جدول.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 34px;">
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.16em;">BUTTONS ON DARK</div>
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+              <div style="background: #ffffff; color: #021d2e; border-radius: 6px; padding: 14px 30px; font-size: 15px; font-weight: 600;">اطلب خدمتك</div>
+              <div style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 14px 30px; font-size: 15px; font-weight: 600;">تتبع طلبك</div>
+              <div style="background: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.22); border-radius: 6px; padding: 13px 30px; font-size: 15px; font-weight: 500;">تعرّف علينا</div>
+              <div style="background: #010ed0; color: #ffffff; border-radius: 6px; padding: 14px 30px; font-size: 15px; font-weight: 600; animation: mdnGlow 3.4s ease-in-out infinite;">حالة نشطة</div>
+              <div style="background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.35); border-radius: 6px; padding: 14px 30px; font-size: 15px; font-weight: 500;">معطّل</div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.16em;">INPUTS · LIGHT SURFACE</div>
+            <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px;">
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <span style="font-size: 13px; color: #57606a;">الاسم الكامل</span>
+                <div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 13px 14px; font-size: 15px; color: #032b42;">محمد الحسيني</div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <span style="font-size: 13px; color: #57606a;">رقم الهاتف — حالة التركيز</span>
+                <div style="border: 1px solid #010ed0; box-shadow: 0 0 0 3px rgba(1,14,208,0.16); border-radius: 6px; padding: 13px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #032b42; font-variant-numeric: tabular-nums;">+20 100 000 0000</div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <span style="font-size: 13px; color: #57606a;">البريد الإلكتروني — خطأ</span>
+                <div style="border: 1px solid #cf222e; border-radius: 6px; padding: 13px 14px; font-size: 15px; color: #cf222e;">بريد غير صالح</div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <span style="font-size: 13px; color: #57606a;">طريقة التواصل المفضلة</span>
+                <div style="display: flex; gap: 8px;">
+                  <div style="flex: 1; text-align: center; border: 1px solid #010ed0; background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 12px 0; font-size: 14px; font-weight: 500;">واتساب</div>
+                  <div style="flex: 1; text-align: center; border: 1px solid #d5d8dc; color: #57606a; border-radius: 6px; padding: 12px 0; font-size: 14px;">اتصال</div>
+                  <div style="flex: 1; text-align: center; border: 1px solid #d5d8dc; color: #57606a; border-radius: 6px; padding: 12px 0; font-size: 14px;">بريد</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.16em;">CHIPS · BADGES</div>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <div style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 7px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em;">MDN-8F3K2</div>
+              <div style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 7px 14px; font-size: 13px;">وصل الطلب</div>
+              <div style="background: rgba(1,14,208,0.14); color: #6b7bff; border: 1px solid rgba(107,123,255,0.35); border-radius: 6px; padding: 6px 13px; font-size: 13px;">جاري المتابعة</div>
+              <div style="background: #010ed0; color: #ffffff; border-radius: 6px; padding: 7px 14px; font-size: 13px; font-weight: 500;">تم الاتفاق</div>
+              <div style="background: rgba(207,34,46,0.12); color: #cf222e; border: 1px solid rgba(207,34,46,0.4); border-radius: 6px; padding: 6px 13px; font-size: 13px;">لم يتم الاتفاق</div>
+              <div style="border: 1px solid rgba(255,255,255,0.16); color: rgba(255,255,255,0.6); border-radius: 6px; padding: 6px 13px; font-size: 13px;">تم الدفع</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 20px;">
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 14px;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.16em;">TIMELINE</div>
+              <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                  <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 12px; height: 12px; border-radius: 6px; background: #010ed0;"></div><div style="width: 1px; height: 34px; background: #010ed0;"></div></div>
+                  <span style="font-size: 15px; color: #ffffff; margin-top: -3px;">وصل الطلب</span>
+                </div>
+                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                  <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 12px; height: 12px; border-radius: 6px; background: #010ed0; animation: mdnGlow 2.8s ease-in-out infinite;"></div><div style="width: 1px; height: 34px; background: rgba(255,255,255,0.14);"></div></div>
+                  <span style="font-size: 15px; color: #dee0ff; margin-top: -3px;">جاري المتابعة</span>
+                </div>
+                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                  <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 12px; height: 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28);"></div></div>
+                  <span style="font-size: 15px; color: rgba(255,255,255,0.4); margin-top: -3px;">جاري تجهيز عرض</span>
+                </div>
+              </div>
+            </div>
+            <div style="flex: 2; display: flex; flex-direction: column; gap: 14px;">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.16em;">TABLE · LIGHT</div>
+              <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; overflow: hidden;">
+                <div style="display: grid; grid-template-columns: 120px 1fr 130px; gap: 16px; padding: 11px 16px; background: #f6f8fa; border-bottom: 1px solid #d5d8dc; font-size: 12px; color: #57606a;"><span>الكود</span><span>الخدمة</span><span>الحالة</span></div>
+                <div style="display: grid; grid-template-columns: 120px 1fr 130px; gap: 16px; padding: 13px 16px; border-bottom: 1px solid #eaeef2; align-items: center;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #032b42;">MDN-8F3K2</span><span style="font-size: 14px; color: #032b42;">حجز وتأجير اليخوت</span><span style="justify-self: start; background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 4px 10px; font-size: 12px;">وصل الطلب</span></div>
+                <div style="display: grid; grid-template-columns: 120px 1fr 130px; gap: 16px; padding: 13px 16px; align-items: center;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #032b42;">MDN-2Q7XL</span><span style="font-size: 14px; color: #032b42;">تنظيم المؤتمرات والفعاليات</span><span style="justify-self: start; background: #010ed0; color: #ffffff; border-radius: 6px; padding: 4px 10px; font-size: 12px;">تم الاتفاق</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </sc-if>
+
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">02 — LANDING / DESKTOP 1440</div>
+    <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden; background: #021d2e; box-shadow: 0 50px 110px -40px rgba(2,29,46,1);">
+
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 24px 56px; border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(2,29,46,0.7);">
+        <div style="display: flex; align-items: baseline; gap: 14px;">
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; color: #ffffff;">MDN</span>
+          <span style="width: 1px; height: 18px; background: rgba(255,255,255,0.22);"></span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 12px; color: #dee0ff; letter-spacing: 0.26em;">TRAVEL</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 38px;">
+          <span style="font-size: 15px; color: #ffffff;">الرئيسية</span>
+          <span style="font-size: 15px; color: rgba(255,255,255,0.6);">الخدمات</span>
+          <span style="font-size: 15px; color: rgba(255,255,255,0.6);">تتبع الطلب</span>
+          <span style="font-size: 15px; color: rgba(255,255,255,0.6);">عن المنصة</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 13px; color: rgba(255,255,255,0.5); letter-spacing: 0.08em;">EN</span>
+          <div style="background: #ffffff; color: #021d2e; border-radius: 6px; padding: 11px 24px; font-size: 14px; font-weight: 600;">اطلب خدمتك</div>
+        </div>
+      </div>
+
+      <div style="position: relative; height: 720px; background: linear-gradient(200deg, #021d2e, #032b42); background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 14px); overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(90% 120% at 78% 8%, rgba(1,14,208,0.5) 0%, rgba(2,29,46,0) 58%);"></div>
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(to left, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 96px 96px;"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(2,29,46,0.95) 0%, rgba(2,29,46,0.35) 55%, rgba(2,29,46,0.6) 100%);"></div>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.32); letter-spacing: 0.18em; text-align: center; line-height: 2;">[ FULL-BLEED VIDEO ]<br>yacht at dusk · 1440×720</div>
+        <div style="position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 34px; padding: 0 56px; max-width: 900px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="width: 28px; height: 1px; background: #6b7bff;"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.22em;">PRIVATE CONCIERGE · SINCE 2014</span>
+          </div>
+          <div style="font-size: 76px; font-weight: 300; color: #ffffff; line-height: 1.3; text-wrap: pretty;">رحلتك تبدأ من هنا… <br>ونحن نهتم بكل التفاصيل</div>
+          <div style="font-size: 19px; color: rgba(255,255,255,0.68); line-height: 2.1; max-width: 620px;">أخبرنا بما تحتاجه، ويتولّى فريق الكونسيرج الترتيب كاملًا — من الإقامة واليخوت حتى الفعاليات الخاصة.</div>
+          <div style="display: flex; align-items: center; gap: 18px;">
+            <div style="background: #ffffff; color: #021d2e; border-radius: 6px; padding: 17px 40px; font-size: 16px; font-weight: 600;">اطلب خدمتك</div>
+            <div style="border: 1px solid rgba(255,255,255,0.22); color: #ffffff; border-radius: 6px; padding: 16px 34px; font-size: 16px;">تتبع طلبك</div>
+          </div>
+        </div>
+        <div style="position: absolute; bottom: 40px; left: 56px; display: flex; align-items: center; gap: 26px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.45); font-variant-numeric: tabular-nums;">01 / 04</span>
+          <span style="width: 120px; height: 1px; background: rgba(255,255,255,0.16);"><span style="display: block; width: 34px; height: 1px; background: #dee0ff;"></span></span>
+        </div>
+      </div>
+
+      <div style="padding: 120px 56px; background: linear-gradient(180deg, #021d2e 0%, #032b42 100%); display: flex; flex-direction: column; gap: 56px;">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px;">
+          <div style="display: flex; flex-direction: column; gap: 18px; max-width: 640px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.22em;">OUR SERVICES</span>
+            <div style="font-size: 46px; font-weight: 300; color: #ffffff; line-height: 1.4;">تسع خدمات، فريق واحد يتابعها</div>
+          </div>
+          <div style="font-size: 15px; color: rgba(255,255,255,0.55); line-height: 2; max-width: 380px;">اختر الخدمة التي تحتاجها وسنعود إليك بعرض مُفصّل خلال ساعات.</div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+            <div style="height: 190px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">HOTEL SUITE</div>
+            <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;"><span style="font-size: 19px; color: #ffffff; font-weight: 500;">حجوزات الفنادق والمنتجعات</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff;">01</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+            <div style="height: 190px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">SERVICED APARTMENT</div>
+            <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;"><span style="font-size: 19px; color: #ffffff; font-weight: 500;">الشقق والأجنحة الفندقية</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff;">02</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+            <div style="height: 190px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">YACHT AT DUSK</div>
+            <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;"><span style="font-size: 19px; color: #ffffff; font-weight: 500;">حجز وتأجير اليخوت</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff;">03</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+            <div style="height: 190px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">CHAUFFEUR CAR</div>
+            <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;"><span style="font-size: 19px; color: #ffffff; font-weight: 500;">تأجير السيارات</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff;">04</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+            <div style="height: 190px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">CONFERENCE HALL</div>
+            <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;"><span style="font-size: 19px; color: #ffffff; font-weight: 500;">تنظيم المؤتمرات والفعاليات</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff;">05</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+            <div style="height: 190px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">GALA NIGHT</div>
+            <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;"><span style="font-size: 19px; color: #ffffff; font-weight: 500;">تنظيم الحفلات والمهرجانات</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff;">06</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+            <div style="height: 190px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">EXPO FLOOR</div>
+            <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;"><span style="font-size: 19px; color: #ffffff; font-weight: 500;">تنظيم وإدارة المعارض</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff;">07</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+            <div style="height: 190px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">MARBLE LOBBY</div>
+            <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;"><span style="font-size: 19px; color: #ffffff; font-weight: 500;">خدمات رجال الأعمال</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff;">08</span></div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+            <div style="height: 190px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">DESERT RESORT</div>
+            <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px;"><span style="font-size: 19px; color: #ffffff; font-weight: 500;">الخدمات الترفيهية والسياحية</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff;">09</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 120px 56px; background: #ffffff; display: flex; flex-direction: column; gap: 64px;">
+        <div style="display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #010ed0; letter-spacing: 0.22em;">HOW IT WORKS</span>
+          <div style="font-size: 44px; font-weight: 300; color: #032b42; line-height: 1.4;">ثلاث خطوات، وننهي الباقي عنك</div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #d5d8dc; border: 1px solid #d5d8dc; border-radius: 6px; overflow: hidden;">
+          <div style="background: #ffffff; padding: 48px 40px; display: flex; flex-direction: column; gap: 18px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #010ed0; letter-spacing: 0.1em;">01</span>
+            <span style="font-size: 26px; color: #032b42; font-weight: 500;">اختار خدمتك</span>
+            <span style="font-size: 15px; color: #57606a; line-height: 2;">تسع خدمات كونسيرج، من الإقامة حتى الفعاليات الخاصة.</span>
+          </div>
+          <div style="background: #f6f8fa; padding: 48px 40px; display: flex; flex-direction: column; gap: 18px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #010ed0; letter-spacing: 0.1em;">02</span>
+            <span style="font-size: 26px; color: #032b42; font-weight: 500;">احكيلنا طلبك</span>
+            <span style="font-size: 15px; color: #57606a; line-height: 2;">نموذج قصير: بياناتك، طريقة التواصل المفضلة، وتفاصيل الطلب.</span>
+          </div>
+          <div style="background: #ffffff; padding: 48px 40px; display: flex; flex-direction: column; gap: 18px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #010ed0; letter-spacing: 0.1em;">03</span>
+            <span style="font-size: 26px; color: #032b42; font-weight: 500;">فريقنا يتواصل معك</span>
+            <span style="font-size: 15px; color: #57606a; line-height: 2;">نرتّب كل شيء ونبقى معك حتى انتهاء الخدمة بالكامل.</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 88px 56px; background: linear-gradient(180deg, #032b42 0%, #021d2e 100%); position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(70% 120% at 15% 100%, rgba(1,14,208,0.4) 0%, rgba(2,29,46,0) 60%);"></div>
+        <div style="position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.06);">
+          <div style="background: transparent; padding: 8px 32px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 38px; color: #ffffff; font-weight: 400; font-variant-numeric: tabular-nums;">12</span><span style="font-size: 14px; color: rgba(255,255,255,0.55);">عامًا من الخدمة الخاصة</span></div>
+          <div style="background: transparent; padding: 8px 32px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 38px; color: #ffffff; font-weight: 400; font-variant-numeric: tabular-nums;">4,800</span><span style="font-size: 14px; color: rgba(255,255,255,0.55);">طلب أُنجز بالكامل</span></div>
+          <div style="background: transparent; padding: 8px 32px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 38px; color: #ffffff; font-weight: 400; font-variant-numeric: tabular-nums;">6h</span><span style="font-size: 14px; color: rgba(255,255,255,0.55);">متوسط زمن الرد</span></div>
+          <div style="background: transparent; padding: 8px 32px; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 38px; color: #ffffff; font-weight: 400; font-variant-numeric: tabular-nums;">96%</span><span style="font-size: 14px; color: rgba(255,255,255,0.55);">عملاء يعودون إلينا</span></div>
+        </div>
+      </div>
+
+      <div style="padding: 88px 56px 40px; background: #021d2e; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; gap: 64px;">
+        <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px;">
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; color: #ffffff;">MDN</span>
+              <span style="width: 1px; height: 18px; background: rgba(255,255,255,0.22);"></span>
+              <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 12px; color: #dee0ff; letter-spacing: 0.26em;">TRAVEL</span>
+            </div>
+            <div style="font-size: 14px; color: rgba(255,255,255,0.5); line-height: 2; max-width: 300px;">كونسيرج خاص للسفر والفعاليات. جزء من عائلة MDN.</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.18em;">SERVICES</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.62);">الفنادق والمنتجعات</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.62);">اليخوت</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.62);">المؤتمرات والفعاليات</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.62);">خدمات رجال الأعمال</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.18em;">PLATFORM</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.62);">تتبع الطلب</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.62);">عن المنصة</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.62);">الأسئلة الشائعة</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.62);">سياسة الخصوصية</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.18em;">CONTACT</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: rgba(255,255,255,0.62); font-variant-numeric: tabular-nums;">+20 100 000 0000</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: rgba(255,255,255,0.62);">care@mdn.travel</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.62);">القاهرة · دبي · جدة</span>
+          </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 26px; display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.35);">© 2026 MDN GROUP</span>
+          <span style="font-size: 13px; color: rgba(255,255,255,0.35);">جميع الحقوق محفوظة</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">03 — SERVICE DETAIL / حجز وتأجير اليخوت</div>
+    <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden; background: #021d2e; box-shadow: 0 50px 110px -40px rgba(2,29,46,1);">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 24px 56px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+        <div style="display: flex; align-items: baseline; gap: 14px;">
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; color: #ffffff;">MDN</span>
+          <span style="width: 1px; height: 18px; background: rgba(255,255,255,0.22);"></span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 12px; color: #dee0ff; letter-spacing: 0.26em;">TRAVEL</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 38px;">
+          <span style="font-size: 15px; color: rgba(255,255,255,0.6);">الرئيسية</span>
+          <span style="font-size: 15px; color: #ffffff;">الخدمات</span>
+          <span style="font-size: 15px; color: rgba(255,255,255,0.6);">تتبع الطلب</span>
+          <span style="font-size: 15px; color: rgba(255,255,255,0.6);">عن المنصة</span>
+        </div>
+        <div style="background: #ffffff; color: #021d2e; border-radius: 6px; padding: 11px 24px; font-size: 14px; font-weight: 600;">اطلب خدمتك</div>
+      </div>
+
+      <div style="position: relative; height: 560px; background: linear-gradient(210deg, #021d2e, #032b42); background-image: repeating-linear-gradient(120deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 14px); overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(80% 130% at 20% 10%, rgba(1,14,208,0.45) 0%, rgba(2,29,46,0) 60%);"></div>
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(to left, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 96px 96px;"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(2,29,46,0.92), rgba(2,29,46,0.3));"></div>
+        <div style="position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%); font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.18em;">[ CINEMATIC PHOTO · YACHT DECK 1440×560 ]</div>
+        <div style="position: relative; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; gap: 26px; padding: 0 56px 72px; max-width: 860px;">
+          <div style="display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.16em;"><span>SERVICES</span><span>/</span><span style="color: #6b7bff;">03 YACHTS</span></div>
+          <div style="font-size: 62px; font-weight: 300; color: #ffffff; line-height: 1.35;">حجز وتأجير اليخوت</div>
+          <div style="font-size: 19px; color: rgba(255,255,255,0.7); line-height: 2.1; max-width: 660px;">أسطول مختار من اليخوت الخاصة مع طاقم كامل ومسارات مصمّمة على مقاسك — في البحر الأحمر، المتوسط، والخليج.</div>
+        </div>
+      </div>
+
+      <div style="padding: 104px 56px; display: grid; grid-template-columns: 1.25fr 1fr; gap: 80px; align-items: start; background: linear-gradient(180deg, #021d2e, #032b42);">
+        <div style="display: flex; flex-direction: column; gap: 44px;">
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.22em;">THE EXPERIENCE</span>
+            <div style="font-size: 34px; font-weight: 300; color: #ffffff; line-height: 1.6;">نختار اليخت، الطاقم، والمسار — وأنت تختار المزاج فقط.</div>
+            <div style="font-size: 17px; color: rgba(255,255,255,0.62); line-height: 2.2;">نبدأ بمحادثة قصيرة لفهم عدد الضيوف، المدة، ونمط الرحلة. بعدها نعود إليك بعرض واحد واضح: اليخت المقترح، الطاقم، الضيافة، وخط السير الكامل — دون خيارات زائدة ولا مقارنات مربكة.</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.02); padding: 26px 28px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 15px; color: #ffffff;">طاقم كامل ومضيفة خاصة</span><span style="font-size: 13px; color: rgba(255,255,255,0.45);">قبطان، طاقم خدمة، شيف عند الطلب</span></div>
+            <div style="background: rgba(255,255,255,0.02); padding: 26px 28px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 15px; color: #ffffff;">مسارات مخصّصة</span><span style="font-size: 13px; color: rgba(255,255,255,0.45);">رحلات يومية أو إقامة عدة ليالٍ</span></div>
+            <div style="background: rgba(255,255,255,0.02); padding: 26px 28px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 15px; color: #ffffff;">نقل من وإلى المرسى</span><span style="font-size: 13px; color: rgba(255,255,255,0.45);">سيارة خاصة مع سائق</span></div>
+            <div style="background: rgba(255,255,255,0.02); padding: 26px 28px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 15px; color: #ffffff;">تنسيق للفعاليات على المتن</span><span style="font-size: 13px; color: rgba(255,255,255,0.45);">مناسبات خاصة، تصوير، ضيافة</span></div>
+          </div>
+        </div>
+        <div style="border-radius: 6px; padding: 44px; background: radial-gradient(120% 140% at 85% 0%, rgba(1,14,208,0.5) 0%, rgba(3,43,66,0) 62%), linear-gradient(160deg, #032b42, #021d2e); border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; gap: 26px; box-shadow: 0 30px 70px -30px rgba(2,29,46,0.9);">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.2em;">REQUEST</span>
+          <div style="font-size: 28px; font-weight: 400; color: #ffffff; line-height: 1.6;">اطلب هذه الخدمة</div>
+          <div style="font-size: 15px; color: rgba(255,255,255,0.6); line-height: 2;">أرسل تفاصيل رحلتك ويعود إليك فريق الكونسيرج خلال ٦ ساعات كحدّ أقصى.</div>
+          <div style="height: 1px; background: rgba(255,255,255,0.08);"></div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; justify-content: space-between; font-size: 14px; color: rgba(255,255,255,0.55);"><span>مدة الرحلة</span><span style="color: #ffffff;">يوم — أسبوع</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 14px; color: rgba(255,255,255,0.55);"><span>عدد الضيوف</span><span style="font-family: 'IBM Plex Mono', monospace; color: #ffffff; font-variant-numeric: tabular-nums;">2 — 30</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 14px; color: rgba(255,255,255,0.55);"><span>الحجز المسبق</span><span style="color: #ffffff;">٤٨ ساعة</span></div>
+          </div>
+          <div style="background: #ffffff; color: #021d2e; border-radius: 6px; padding: 16px 0; text-align: center; font-size: 16px; font-weight: 600;">اطلب خدمتك</div>
+          <div style="text-align: center; font-size: 13px; color: rgba(255,255,255,0.4);">بدون دفع الآن — الطلب مجاني تمامًا</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">04 — REQUEST FORM</div>
+    <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden; position: relative; background: linear-gradient(190deg, #021d2e, #032b42); padding: 96px 56px; box-shadow: 0 50px 110px -40px rgba(2,29,46,1);">
+      <div style="position: absolute; inset: 0; background: radial-gradient(60% 90% at 88% 4%, rgba(1,14,208,0.42) 0%, rgba(2,29,46,0) 60%);"></div>
+      <div style="position: absolute; inset: 0; background-image: linear-gradient(to left, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 96px 96px;"></div>
+      <div style="position: relative; display: grid; grid-template-columns: 1fr 1.3fr; gap: 72px; align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: 26px; padding-top: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.22em;">NEW REQUEST · STEP 1 OF 1</span>
+          <div style="font-size: 46px; font-weight: 300; color: #ffffff; line-height: 1.45;">احكيلنا طلبك<br>ونتولّى الباقي</div>
+          <div style="font-size: 16px; color: rgba(255,255,255,0.6); line-height: 2.1; max-width: 380px;">لا حجوزات فورية ولا دفع الآن. نقرأ طلبك بأنفسنا ونعود إليك بعرض واحد مُفصّل.</div>
+          <div style="height: 1px; background: rgba(255,255,255,0.08); margin: 8px 0;"></div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; gap: 12px; align-items: center;"><span style="width: 6px; height: 6px; border-radius: 3px; background: #6b7bff;"></span><span style="font-size: 14px; color: rgba(255,255,255,0.6);">رد خلال ٦ ساعات</span></div>
+            <div style="display: flex; gap: 12px; align-items: center;"><span style="width: 6px; height: 6px; border-radius: 3px; background: #6b7bff;"></span><span style="font-size: 14px; color: rgba(255,255,255,0.6);">كود مرجعي لتتبع الطلب</span></div>
+            <div style="display: flex; gap: 12px; align-items: center;"><span style="width: 6px; height: 6px; border-radius: 3px; background: #6b7bff;"></span><span style="font-size: 14px; color: rgba(255,255,255,0.6);">بياناتك لا تُشارك مع أي طرف</span></div>
+          </div>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 48px; display: flex; flex-direction: column; gap: 30px; box-shadow: 0 40px 90px -30px rgba(2,29,46,0.75);">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 22px; color: #032b42; font-weight: 500;">نموذج الطلب</span>
+            <span style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 6px 12px; font-size: 13px;">حجز وتأجير اليخوت</span>
+          </div>
+          <div style="height: 1px; background: #eaeef2;"></div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px;">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 13px; color: #57606a;">الاسم <span style="color: #cf222e;">*</span></span>
+              <div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 14px; font-size: 15px; color: #8a94a3;">الاسم الكامل</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 13px; color: #57606a;">رقم الهاتف <span style="color: #cf222e;">*</span></span>
+              <div style="border: 1px solid #010ed0; box-shadow: 0 0 0 3px rgba(1,14,208,0.14); border-radius: 6px; padding: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #032b42; font-variant-numeric: tabular-nums;">+20 100 000 0000</div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 13px; color: #57606a;">البريد الإلكتروني</span>
+            <div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #8a94a3;">name@example.com</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 13px; color: #57606a;">طريقة التواصل المفضلة</span>
+            <div style="display: flex; gap: 10px;">
+              <div style="flex: 1; text-align: center; border: 1px solid #010ed0; background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 14px 0; font-size: 15px; font-weight: 500;">واتساب</div>
+              <div style="flex: 1; text-align: center; border: 1px solid #d5d8dc; color: #57606a; border-radius: 6px; padding: 14px 0; font-size: 15px;">اتصال هاتفي</div>
+              <div style="flex: 1; text-align: center; border: 1px solid #d5d8dc; color: #57606a; border-radius: 6px; padding: 14px 0; font-size: 15px;">بريد إلكتروني</div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 13px; color: #57606a;">تفاصيل الطلب <span style="color: #cf222e;">*</span></span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8a94a3; font-variant-numeric: tabular-nums;">0 / 800</span>
+            </div>
+            <div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 14px; min-height: 132px; font-size: 15px; color: #8a94a3; line-height: 2;">التواريخ، عدد الضيوف، المدينة أو المرسى، وأي تفاصيل تحب أن نعرفها…</div>
+          </div>
+          <div style="height: 1px; background: #eaeef2;"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+            <span style="font-size: 13px; color: #57606a; line-height: 1.8;">بإرسال الطلب أنت توافق على سياسة الخصوصية.</span>
+            <div style="background: #032b42; color: #ffffff; border-radius: 6px; padding: 16px 40px; font-size: 16px; font-weight: 600; white-space: nowrap;">إرسال الطلب</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">05 — SUCCESS</div>
+    <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden; position: relative; background: linear-gradient(180deg, #021d2e, #032b42); height: 760px; display: flex; align-items: center; justify-content: center; box-shadow: 0 50px 110px -40px rgba(2,29,46,1);">
+      <div style="position: absolute; inset: 0; background: radial-gradient(60% 80% at 50% 0%, rgba(1,14,208,0.45) 0%, rgba(2,29,46,0) 62%);"></div>
+      <div style="position: absolute; inset: 0; background-image: linear-gradient(to left, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 96px 96px;"></div>
+      <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 34px; text-align: center; max-width: 720px; padding: 0 40px;">
+        <div style="width: 56px; height: 56px; border-radius: 6px; border: 1px solid rgba(222,224,255,0.4); background: rgba(222,224,255,0.08); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: #dee0ff;">✓</div>
+        <div style="font-size: 54px; font-weight: 300; color: #ffffff; line-height: 1.4;">وصلنا طلبك بأمان</div>
+        <div style="font-size: 18px; color: rgba(255,255,255,0.65); line-height: 2.1; max-width: 560px;">فريق الكونسيرج يراجع التفاصيل الآن، وسيتواصل معك على واتساب خلال ٦ ساعات. احتفظ بالكود المرجعي لمتابعة حالة الطلب.</div>
+        <div style="display: flex; flex-direction: column; gap: 14px; align-items: center; margin-top: 8px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.2em;">REFERENCE CODE</span>
+          <div style="display: flex; align-items: stretch; gap: 10px;">
+            <div style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 18px 34px; font-family: 'IBM Plex Mono', monospace; font-size: 30px; font-weight: 600; letter-spacing: 0.14em; font-variant-numeric: tabular-nums;">MDN-8F3K2</div>
+            <div style="border: 1px solid rgba(255,255,255,0.22); border-radius: 6px; padding: 0 22px; display: flex; align-items: center; font-size: 14px; color: #ffffff;">نسخ الكود</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px; margin-top: 12px;">
+          <div style="background: #ffffff; color: #021d2e; border-radius: 6px; padding: 15px 34px; font-size: 15px; font-weight: 600;">تتبع الطلب</div>
+          <div style="border: 1px solid rgba(255,255,255,0.22); color: #ffffff; border-radius: 6px; padding: 14px 30px; font-size: 15px;">العودة للرئيسية</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">06 — TRACK REQUEST</div>
+    <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden; position: relative; background: linear-gradient(190deg, #021d2e, #032b42); padding: 88px 56px; box-shadow: 0 50px 110px -40px rgba(2,29,46,1);">
+      <div style="position: absolute; inset: 0; background: radial-gradient(55% 80% at 12% 6%, rgba(1,14,208,0.4) 0%, rgba(2,29,46,0) 60%);"></div>
+      <div style="position: relative; display: grid; grid-template-columns: 1fr 1.15fr; gap: 72px; align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: 28px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b7bff; letter-spacing: 0.22em;">TRACK YOUR REQUEST</span>
+          <div style="font-size: 46px; font-weight: 300; color: #ffffff; line-height: 1.45;">تتبع طلبك</div>
+          <div style="font-size: 16px; color: rgba(255,255,255,0.6); line-height: 2.1; max-width: 400px;">أدخل الكود المرجعي ورقم الهاتف الذي استخدمته في الطلب.</div>
+          <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 34px; background: rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 22px;">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 13px; color: rgba(255,255,255,0.55);">الكود المرجعي</span>
+              <div style="border: 1px solid #010ed0; box-shadow: 0 0 0 3px rgba(1,14,208,0.25); border-radius: 6px; padding: 15px; background: rgba(2,29,46,0.6); font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #ffffff; letter-spacing: 0.12em;">MDN-8F3K2</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 13px; color: rgba(255,255,255,0.55);">رقم الهاتف</span>
+              <div style="border: 1px solid rgba(255,255,255,0.14); border-radius: 6px; padding: 15px; background: rgba(2,29,46,0.6); font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">+20 100 000 0000</div>
+            </div>
+            <div style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 15px 0; text-align: center; font-size: 15px; font-weight: 600;">عرض حالة الطلب</div>
+          </div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 44px; background: rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 36px;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; color: #ffffff; letter-spacing: 0.12em;">MDN-8F3K2</span>
+              <span style="font-size: 15px; color: rgba(255,255,255,0.55);">حجز وتأجير اليخوت · الغردقة</span>
+            </div>
+            <div style="background: rgba(1,14,208,0.16); border: 1px solid rgba(107,123,255,0.4); color: #6b7bff; border-radius: 6px; padding: 7px 14px; font-size: 13px;">جاري تجهيز عرض</div>
+          </div>
+          <div style="height: 1px; background: rgba(255,255,255,0.07);"></div>
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 13px; height: 13px; border-radius: 7px; background: #010ed0;"></div><div style="width: 1px; height: 62px; background: #010ed0;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 6px; margin-top: -5px;"><span style="font-size: 17px; color: #ffffff;">وصل الطلب</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.4); font-variant-numeric: tabular-nums;">2026-08-28 · 14:20</span></div>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 13px; height: 13px; border-radius: 7px; background: #010ed0;"></div><div style="width: 1px; height: 62px; background: #010ed0;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 6px; margin-top: -5px;"><span style="font-size: 17px; color: #ffffff;">جاري المتابعة</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.4); font-variant-numeric: tabular-nums;">2026-08-28 · 18:05</span></div>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 13px; height: 13px; border-radius: 7px; background: #010ed0; animation: mdnGlow 2.8s ease-in-out infinite;"></div><div style="width: 1px; height: 62px; background: rgba(255,255,255,0.12);"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 6px; margin-top: -5px;"><span style="font-size: 17px; color: #dee0ff; font-weight: 500;">جاري تجهيز عرض</span><span style="font-size: 13px; color: rgba(255,255,255,0.45);">الخطوة الحالية — نجهّز لك العرض الآن</span></div>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 13px; height: 13px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.28);"></div><div style="width: 1px; height: 62px; background: rgba(255,255,255,0.12);"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 6px; margin-top: -5px;"><span style="font-size: 17px; color: rgba(255,255,255,0.4);">تم التواصل</span></div>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 13px; height: 13px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.28);"></div><div style="width: 1px; height: 62px; background: rgba(255,255,255,0.12);"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 6px; margin-top: -5px;"><span style="font-size: 17px; color: rgba(255,255,255,0.4);">تم الاتفاق</span><span style="font-size: 13px; color: rgba(255,255,255,0.3);">أو: لم يتم الاتفاق</span></div>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 13px; height: 13px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.28);"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 6px; margin-top: -5px;"><span style="font-size: 17px; color: rgba(255,255,255,0.4);">تم الدفع</span></div>
+            </div>
+          </div>
+          <div style="height: 1px; background: rgba(255,255,255,0.07);"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+            <span style="font-size: 14px; color: rgba(255,255,255,0.5);">تحتاج تعديل الطلب؟ راسل الكونسيرج مباشرة.</span>
+            <div style="border: 1px solid rgba(255,255,255,0.22); color: #ffffff; border-radius: 6px; padding: 12px 26px; font-size: 14px;">تواصل معنا</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ showAdmin }}" hint-placeholder-val="{{ true }}">
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">07 — ADMIN / LOGIN</div>
+    <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; height: 640px; box-shadow: 0 50px 110px -40px rgba(2,29,46,1);">
+      <div style="position: relative; background: linear-gradient(160deg, #021d2e, #032b42); padding: 56px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: radial-gradient(80% 100% at 80% 10%, rgba(1,14,208,0.5) 0%, rgba(2,29,46,0) 62%);"></div>
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(to left, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 72px 72px;"></div>
+        <div style="position: relative; display: flex; align-items: baseline; gap: 14px;">
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; color: #ffffff;">MDN</span>
+          <span style="width: 1px; height: 18px; background: rgba(255,255,255,0.22);"></span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 12px; color: #dee0ff; letter-spacing: 0.26em;">TRAVEL</span>
+        </div>
+        <div style="position: relative; display: flex; flex-direction: column; gap: 18px;">
+          <div style="font-size: 38px; font-weight: 300; color: #ffffff; line-height: 1.5;">لوحة إدارة<br>طلبات الكونسيرج</div>
+          <div style="font-size: 15px; color: rgba(255,255,255,0.55); line-height: 2; max-width: 320px;">الوصول مقصور على فريق العمليات.</div>
+        </div>
+        <div style="position: relative; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 0.16em;">ADMIN · v2.4</div>
+      </div>
+      <div style="background: #f6f8fa; display: flex; align-items: center; justify-content: center; padding: 56px;">
+        <div style="width: 100%; max-width: 400px; background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 40px; display: flex; flex-direction: column; gap: 24px;">
+          <div style="font-size: 22px; color: #032b42; font-weight: 500;">تسجيل الدخول</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 13px; color: #57606a;">البريد الإلكتروني</span>
+            <div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 12px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #032b42;">ops@mdn.travel</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 13px; color: #57606a;">كلمة المرور</span>
+            <div style="border: 1px solid #010ed0; box-shadow: 0 0 0 3px rgba(1,14,208,0.14); border-radius: 6px; padding: 12px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #032b42; letter-spacing: 0.2em;">••••••••</div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 13px; color: #57606a;">تذكّرني</span>
+            <span style="font-size: 13px; color: #010ed0;">نسيت كلمة المرور؟</span>
+          </div>
+          <div style="background: #032b42; color: #ffffff; border-radius: 6px; padding: 13px 0; text-align: center; font-size: 15px; font-weight: 600;">دخول</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">08 — ADMIN / TICKETS</div>
+    <div style="border: 1px solid #d5d8dc; border-radius: 6px; overflow: hidden; background: #f6f8fa; display: grid; grid-template-columns: 232px 1fr;">
+      <div style="background: #ffffff; border-left: 1px solid #d5d8dc; padding: 24px 0; display: flex; flex-direction: column; gap: 26px;">
+        <div style="display: flex; align-items: baseline; gap: 12px; padding: 0 20px;">
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; color: #032b42;">MDN</span>
+          <span style="width: 1px; height: 15px; background: #d5d8dc;"></span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 10px; color: #010ed0; letter-spacing: 0.26em;">TRAVEL</span>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="padding: 11px 20px; font-size: 14px; color: #ffffff; background: #032b42;">الطلبات</div>
+          <div style="padding: 11px 20px; font-size: 14px; color: #57606a;">الإحصائيات</div>
+          <div style="padding: 11px 20px; font-size: 14px; color: #57606a;">الخدمات</div>
+          <div style="padding: 11px 20px; font-size: 14px; color: #57606a;">المستخدمون</div>
+          <div style="padding: 11px 20px; font-size: 14px; color: #57606a;">الإعدادات</div>
+        </div>
+      </div>
+      <div style="padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="font-size: 22px; color: #032b42; font-weight: 500;">الطلبات</div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="border: 1px solid #d5d8dc; background: #ffffff; border-radius: 6px; padding: 8px 14px; font-size: 13px; color: #57606a;">تصدير CSV</div>
+            <div style="width: 28px; height: 28px; border-radius: 6px; background: #dee0ff; color: #021d2e; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px;">OP</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+          <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; color: #57606a;">طلبات جديدة</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 32px; color: #032b42; font-variant-numeric: tabular-nums;">18</span></div>
+          <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; color: #57606a;">جاري المتابعة</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 32px; color: #032b42; font-variant-numeric: tabular-nums;">42</span></div>
+          <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; color: #57606a;">تم الاتفاق هذا الشهر</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 32px; color: #010ed0; font-variant-numeric: tabular-nums;">27</span></div>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; overflow: hidden;">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid #d5d8dc; background: #f6f8fa;">
+            <div style="flex: 1; border: 1px solid #d5d8dc; background: #ffffff; border-radius: 6px; padding: 8px 12px; font-size: 13px; color: #8a94a3;">بحث بالكود أو الاسم أو الهاتف…</div>
+            <div style="border: 1px solid #d5d8dc; background: #ffffff; border-radius: 6px; padding: 8px 14px; font-size: 13px; color: #032b42;">الخدمة: الكل</div>
+            <div style="border: 1px solid #010ed0; background: #dee0ff; border-radius: 6px; padding: 8px 14px; font-size: 13px; color: #021d2e;">الحالة: جاري المتابعة</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 130px 150px 1fr 120px 160px 110px; gap: 14px; padding: 10px 16px; background: #f6f8fa; border-bottom: 1px solid #d5d8dc; font-size: 12px; color: #57606a;"><span>الكود</span><span>العميل</span><span>الخدمة</span><span>التواصل</span><span>الحالة</span><span>التاريخ</span></div>
+          <div style="display: grid; grid-template-columns: 130px 150px 1fr 120px 160px 110px; gap: 14px; padding: 13px 16px; border-bottom: 1px solid #eaeef2; align-items: center;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #010ed0;">MDN-8F3K2</span><span style="font-size: 14px; color: #032b42;">محمد الحسيني</span><span style="font-size: 14px; color: #032b42;">حجز وتأجير اليخوت</span><span style="font-size: 13px; color: #57606a;">واتساب</span><span style="justify-self: start; background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 4px 10px; font-size: 12px;">وصل الطلب</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #57606a; font-variant-numeric: tabular-nums;">08-28</span></div>
+          <div style="display: grid; grid-template-columns: 130px 150px 1fr 120px 160px 110px; gap: 14px; padding: 13px 16px; border-bottom: 1px solid #eaeef2; align-items: center;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #010ed0;">MDN-2Q7XL</span><span style="font-size: 14px; color: #032b42;">سارة العتيبي</span><span style="font-size: 14px; color: #032b42;">تنظيم المؤتمرات والفعاليات</span><span style="font-size: 13px; color: #57606a;">اتصال</span><span style="justify-self: start; background: rgba(1,14,208,0.1); border: 1px solid rgba(1,14,208,0.3); color: #010ed0; border-radius: 6px; padding: 3px 9px; font-size: 12px;">جاري المتابعة</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #57606a; font-variant-numeric: tabular-nums;">08-27</span></div>
+          <div style="display: grid; grid-template-columns: 130px 150px 1fr 120px 160px 110px; gap: 14px; padding: 13px 16px; border-bottom: 1px solid #eaeef2; align-items: center;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #010ed0;">MDN-5R1TP</span><span style="font-size: 14px; color: #032b42;">خالد منصور</span><span style="font-size: 14px; color: #032b42;">الشقق والأجنحة الفندقية</span><span style="font-size: 13px; color: #57606a;">بريد</span><span style="justify-self: start; background: rgba(1,14,208,0.1); border: 1px solid rgba(1,14,208,0.3); color: #010ed0; border-radius: 6px; padding: 3px 9px; font-size: 12px;">جاري تجهيز عرض</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #57606a; font-variant-numeric: tabular-nums;">08-27</span></div>
+          <div style="display: grid; grid-template-columns: 130px 150px 1fr 120px 160px 110px; gap: 14px; padding: 13px 16px; border-bottom: 1px solid #eaeef2; align-items: center;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #010ed0;">MDN-9K4MZ</span><span style="font-size: 14px; color: #032b42;">نورة الشهري</span><span style="font-size: 14px; color: #032b42;">خدمات رجال الأعمال</span><span style="font-size: 13px; color: #57606a;">واتساب</span><span style="justify-self: start; background: #010ed0; color: #ffffff; border-radius: 6px; padding: 4px 10px; font-size: 12px;">تم الاتفاق</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #57606a; font-variant-numeric: tabular-nums;">08-26</span></div>
+          <div style="display: grid; grid-template-columns: 130px 150px 1fr 120px 160px 110px; gap: 14px; padding: 13px 16px; border-bottom: 1px solid #eaeef2; align-items: center;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #010ed0;">MDN-3H8WD</span><span style="font-size: 14px; color: #032b42;">ياسمين فؤاد</span><span style="font-size: 14px; color: #032b42;">تنظيم الحفلات والمهرجانات</span><span style="font-size: 13px; color: #57606a;">اتصال</span><span style="justify-self: start; background: rgba(207,34,46,0.08); border: 1px solid rgba(207,34,46,0.35); color: #cf222e; border-radius: 6px; padding: 3px 9px; font-size: 12px;">لم يتم الاتفاق</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #57606a; font-variant-numeric: tabular-nums;">08-25</span></div>
+          <div style="display: grid; grid-template-columns: 130px 150px 1fr 120px 160px 110px; gap: 14px; padding: 13px 16px; align-items: center;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #010ed0;">MDN-7C2VB</span><span style="font-size: 14px; color: #032b42;">عمر الديب</span><span style="font-size: 14px; color: #032b42;">تأجير السيارات</span><span style="font-size: 13px; color: #57606a;">واتساب</span><span style="justify-self: start; border: 1px solid #d5d8dc; color: #57606a; border-radius: 6px; padding: 3px 9px; font-size: 12px;">تم الدفع</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #57606a; font-variant-numeric: tabular-nums;">08-24</span></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-top: 1px solid #d5d8dc; background: #f6f8fa;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #57606a; font-variant-numeric: tabular-nums;">1–6 of 142</span>
+            <div style="display: flex; gap: 8px;"><span style="border: 1px solid #d5d8dc; background: #ffffff; border-radius: 6px; padding: 5px 12px; font-size: 12px; color: #57606a;">السابق</span><span style="border: 1px solid #d5d8dc; background: #ffffff; border-radius: 6px; padding: 5px 12px; font-size: 12px; color: #032b42;">التالي</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">09 — ADMIN / TICKET DETAIL</div>
+    <div style="border: 1px solid #d5d8dc; border-radius: 6px; overflow: hidden; background: #f6f8fa; padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 22px;">
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #57606a;"><span>الطلبات</span><span>/</span><span style="font-family: 'IBM Plex Mono', monospace; color: #032b42;">MDN-8F3K2</span></div>
+      <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 22px;">
+            <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;">
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; color: #032b42; letter-spacing: 0.1em;">MDN-8F3K2</span>
+                <span style="font-size: 14px; color: #57606a;">حجز وتأجير اليخوت · الغردقة</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 5px 11px; font-size: 12px;">وصل الطلب</span>
+                <span style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 5px 11px; font-size: 12px; color: #57606a;">تغيير الحالة ▾</span>
+              </div>
+            </div>
+            <div style="height: 1px; background: #eaeef2;"></div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+              <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; color: #57606a;">الاسم</span><span style="font-size: 15px; color: #032b42;">محمد الحسيني</span></div>
+              <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; color: #57606a;">الهاتف</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #032b42; font-variant-numeric: tabular-nums;">+20 100 000 0000</span></div>
+              <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; color: #57606a;">البريد</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #032b42;">m.h@example.com</span></div>
+              <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; color: #57606a;">التواصل المفضل</span><span style="font-size: 15px; color: #032b42;">واتساب</span></div>
+              <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; color: #57606a;">تاريخ الطلب</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #032b42; font-variant-numeric: tabular-nums;">2026-08-28 14:20</span></div>
+              <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; color: #57606a;">المسؤول</span><span style="font-size: 15px; color: #032b42;">فريق العمليات — ريم</span></div>
+            </div>
+            <div style="height: 1px; background: #eaeef2;"></div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 12px; color: #57606a;">تفاصيل الطلب</span>
+              <span style="font-size: 15px; color: #032b42; line-height: 2.1;">يخت خاص لمدة ثلاثة أيام في الغردقة، ١٢ ضيفًا، مع طاقم كامل وشيف. مطلوب نقل من المطار إلى المرسى، وتنسيق عشاء خاص في الليلة الثانية.</span>
+            </div>
+          </div>
+          <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 18px;">
+            <span style="font-size: 16px; color: #032b42; font-weight: 500;">ملاحظات داخلية</span>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="background: #f6f8fa; border: 1px solid #eaeef2; border-radius: 6px; padding: 14px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 14px; color: #032b42; line-height: 1.9;">تم التواصل مع مشغّل الأسطول — عرض مبدئي جاهز غدًا صباحًا.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">ريم · 08-28 18:40</span></div>
+              <div style="background: #f6f8fa; border: 1px solid #eaeef2; border-radius: 6px; padding: 14px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 14px; color: #032b42; line-height: 1.9;">العميل يفضّل التواصل بعد الرابعة عصرًا.</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3;">أحمد · 08-28 15:05</span></div>
+            </div>
+            <div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 14px; font-size: 14px; color: #8a94a3;">أضف ملاحظة داخلية…</div>
+            <div style="align-self: flex-start; background: #032b42; color: #ffffff; border-radius: 6px; padding: 10px 22px; font-size: 14px; font-weight: 500;">إضافة</div>
+          </div>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 20px;">
+          <span style="font-size: 16px; color: #032b42; font-weight: 500;">سجل الحالات</span>
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 10px; height: 10px; border-radius: 5px; background: #010ed0;"></div><div style="width: 1px; height: 48px; background: #010ed0;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 14px; color: #032b42;">وصل الطلب</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; font-variant-numeric: tabular-nums;">08-28 14:20 · النظام</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 10px; height: 10px; border-radius: 5px; background: #010ed0;"></div><div style="width: 1px; height: 48px; background: #d5d8dc;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 14px; color: #032b42;">جاري المتابعة</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; font-variant-numeric: tabular-nums;">08-28 18:05 · ريم</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 10px; height: 10px; border-radius: 5px; border: 1px solid #d5d8dc;"></div><div style="width: 1px; height: 48px; background: #d5d8dc;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 14px; color: #8a94a3;">جاري تجهيز عرض</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 10px; height: 10px; border-radius: 5px; border: 1px solid #d5d8dc;"></div><div style="width: 1px; height: 48px; background: #d5d8dc;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 14px; color: #8a94a3;">تم التواصل</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 10px; height: 10px; border-radius: 5px; border: 1px solid #d5d8dc;"></div><div style="width: 1px; height: 48px; background: #d5d8dc;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 14px; color: #8a94a3;">تم الاتفاق / لم يتم الاتفاق</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 10px; height: 10px; border-radius: 5px; border: 1px solid #d5d8dc;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 14px; color: #8a94a3;">تم الدفع</span></div>
+            </div>
+          </div>
+          <div style="height: 1px; background: #eaeef2;"></div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 12px; color: #57606a;">إجراء سريع</span>
+            <div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 11px 14px; font-size: 14px; color: #032b42; display: flex; justify-content: space-between;"><span>جاري تجهيز عرض</span><span style="color: #8a94a3;">▾</span></div>
+            <div style="background: #010ed0; color: #ffffff; border-radius: 6px; padding: 11px 0; text-align: center; font-size: 14px; font-weight: 600;">تحديث الحالة</div>
+            <div style="border: 1px solid rgba(207,34,46,0.35); color: #cf222e; border-radius: 6px; padding: 10px 0; text-align: center; font-size: 14px;">تعليم كـ لم يتم الاتفاق</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ showMobile }}" hint-placeholder-val="{{ true }}">
+  <div style="width: 1440px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a94a3; letter-spacing: 0.2em;">10 — MOBILE 390</div>
+    <div style="display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap;">
+
+      <div style="width: 390px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; overflow: hidden; background: #021d2e; box-shadow: 0 40px 90px -40px rgba(2,29,46,1);">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+          <div style="display: flex; align-items: baseline; gap: 10px;">
+            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #ffffff;">MDN</span>
+            <span style="width: 1px; height: 13px; background: rgba(255,255,255,0.22);"></span>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 9px; color: #dee0ff; letter-spacing: 0.26em;">TRAVEL</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px; width: 22px;"><span style="height: 1px; background: rgba(255,255,255,0.7);"></span><span style="height: 1px; background: rgba(255,255,255,0.7);"></span></div>
+        </div>
+        <div style="position: relative; height: 470px; background: linear-gradient(200deg, #021d2e, #032b42); background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 14px); overflow: hidden;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(90% 90% at 80% 10%, rgba(1,14,208,0.5) 0%, rgba(2,29,46,0) 60%);"></div>
+          <div style="position: absolute; inset: 0; background-image: linear-gradient(to left, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 64px 64px;"></div>
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(2,29,46,0.95), rgba(2,29,46,0.35));"></div>
+          <div style="position: absolute; top: 24%; left: 50%; transform: translate(-50%, -50%); font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.16em;">[ VIDEO · 390×470 ]</div>
+          <div style="position: relative; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; gap: 22px; padding: 0 20px 32px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6b7bff; letter-spacing: 0.2em;">PRIVATE CONCIERGE</span>
+            <div style="font-size: 38px; font-weight: 300; color: #ffffff; line-height: 1.35;">رحلتك تبدأ من هنا… ونحن نهتم بكل التفاصيل</div>
+            <div style="font-size: 15px; color: rgba(255,255,255,0.65); line-height: 2;">أخبرنا بما تحتاجه، ويتولّى فريقنا الترتيب كاملًا.</div>
+            <div style="background: #ffffff; color: #021d2e; border-radius: 6px; padding: 16px 0; text-align: center; font-size: 16px; font-weight: 600;">اطلب خدمتك</div>
+          </div>
+        </div>
+        <div style="padding: 44px 20px; background: linear-gradient(180deg, #021d2e, #032b42); display: flex; flex-direction: column; gap: 22px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6b7bff; letter-spacing: 0.2em;">OUR SERVICES</span>
+          <div style="font-size: 28px; font-weight: 300; color: #ffffff; line-height: 1.5;">تسع خدمات، فريق واحد</div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+              <div style="height: 150px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">HOTEL SUITE</div>
+              <div style="padding: 18px; display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 17px; color: #ffffff;">حجوزات الفنادق والمنتجعات</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6b7bff;">01</span></div>
+            </div>
+            <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.02);">
+              <div style="height: 150px; background: linear-gradient(160deg, #021d2e, #032b42); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.14em;">YACHT AT DUSK</div>
+              <div style="padding: 18px; display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 17px; color: #ffffff;">حجز وتأجير اليخوت</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6b7bff;">03</span></div>
+            </div>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.18); color: #ffffff; border-radius: 6px; padding: 14px 0; text-align: center; font-size: 15px;">كل الخدمات</div>
+        </div>
+        <div style="padding: 40px 20px; background: #ffffff; display: flex; flex-direction: column; gap: 20px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #010ed0; letter-spacing: 0.2em;">HOW IT WORKS</span>
+          <div style="border: 1px solid #d5d8dc; border-radius: 6px; overflow: hidden;">
+            <div style="padding: 22px; border-bottom: 1px solid #d5d8dc; display: flex; flex-direction: column; gap: 8px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #010ed0;">01</span><span style="font-size: 19px; color: #032b42; font-weight: 500;">اختار خدمتك</span></div>
+            <div style="padding: 22px; border-bottom: 1px solid #d5d8dc; background: #f6f8fa; display: flex; flex-direction: column; gap: 8px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #010ed0;">02</span><span style="font-size: 19px; color: #032b42; font-weight: 500;">احكيلنا طلبك</span></div>
+            <div style="padding: 22px; display: flex; flex-direction: column; gap: 8px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #010ed0;">03</span><span style="font-size: 19px; color: #032b42; font-weight: 500;">فريقنا يتواصل معك</span></div>
+          </div>
+        </div>
+        <div style="padding: 32px 20px; background: #021d2e; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; align-items: baseline; gap: 10px;">
+            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; color: #ffffff;">MDN</span>
+            <span style="width: 1px; height: 13px; background: rgba(255,255,255,0.22);"></span>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 9px; color: #dee0ff; letter-spacing: 0.26em;">TRAVEL</span>
+          </div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.35);">© 2026 MDN GROUP</span>
+        </div>
+      </div>
+
+      <div style="width: 390px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; overflow: hidden; background: linear-gradient(190deg, #021d2e, #032b42); padding: 28px 20px 40px; display: flex; flex-direction: column; gap: 22px; box-shadow: 0 40px 90px -40px rgba(2,29,46,1);">
+        <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.55);">→ رجوع</div>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6b7bff; letter-spacing: 0.2em;">NEW REQUEST</span>
+        <div style="font-size: 32px; font-weight: 300; color: #ffffff; line-height: 1.45;">احكيلنا طلبك</div>
+        <div style="background: #ffffff; border: 1px solid #d5d8dc; border-radius: 6px; padding: 22px; display: flex; flex-direction: column; gap: 20px;">
+          <span style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 6px 12px; font-size: 12px; align-self: flex-start;">حجز وتأجير اليخوت</span>
+          <div style="display: flex; flex-direction: column; gap: 7px;"><span style="font-size: 12px; color: #57606a;">الاسم *</span><div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 14px; font-size: 15px; color: #8a94a3;">الاسم الكامل</div></div>
+          <div style="display: flex; flex-direction: column; gap: 7px;"><span style="font-size: 12px; color: #57606a;">رقم الهاتف *</span><div style="border: 1px solid #010ed0; box-shadow: 0 0 0 3px rgba(1,14,208,0.14); border-radius: 6px; padding: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #032b42;">+20 100 000 0000</div></div>
+          <div style="display: flex; flex-direction: column; gap: 7px;"><span style="font-size: 12px; color: #57606a;">البريد الإلكتروني</span><div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #8a94a3;">name@example.com</div></div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <span style="font-size: 12px; color: #57606a;">طريقة التواصل المفضلة</span>
+            <div style="display: flex; gap: 8px;">
+              <div style="flex: 1; text-align: center; border: 1px solid #010ed0; background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 13px 0; font-size: 14px; font-weight: 500;">واتساب</div>
+              <div style="flex: 1; text-align: center; border: 1px solid #d5d8dc; color: #57606a; border-radius: 6px; padding: 13px 0; font-size: 14px;">اتصال</div>
+              <div style="flex: 1; text-align: center; border: 1px solid #d5d8dc; color: #57606a; border-radius: 6px; padding: 13px 0; font-size: 14px;">بريد</div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 7px;"><span style="font-size: 12px; color: #57606a;">تفاصيل الطلب *</span><div style="border: 1px solid #d5d8dc; border-radius: 6px; padding: 14px; min-height: 110px; font-size: 15px; color: #8a94a3; line-height: 1.9;">التواريخ، عدد الضيوف، المدينة…</div></div>
+          <div style="background: #032b42; color: #ffffff; border-radius: 6px; padding: 16px 0; text-align: center; font-size: 16px; font-weight: 600;">إرسال الطلب</div>
+        </div>
+      </div>
+
+      <div style="width: 390px; display: flex; flex-direction: column; gap: 28px;">
+        <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; overflow: hidden; position: relative; background: linear-gradient(180deg, #021d2e, #032b42); padding: 72px 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; box-shadow: 0 40px 90px -40px rgba(2,29,46,1);">
+          <div style="position: absolute; inset: 0; background: radial-gradient(70% 60% at 50% 0%, rgba(1,14,208,0.45) 0%, rgba(2,29,46,0) 62%);"></div>
+          <div style="position: absolute; inset: 0; background-image: linear-gradient(to left, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 64px 64px;"></div>
+          <div style="position: relative; width: 48px; height: 48px; border-radius: 6px; border: 1px solid rgba(222,224,255,0.4); background: rgba(222,224,255,0.08); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 18px; color: #dee0ff;">✓</div>
+          <div style="position: relative; font-size: 34px; font-weight: 300; color: #ffffff; line-height: 1.4;">وصلنا طلبك بأمان</div>
+          <div style="position: relative; font-size: 15px; color: rgba(255,255,255,0.62); line-height: 2;">فريق الكونسيرج سيتواصل معك على واتساب خلال ٦ ساعات.</div>
+          <div style="position: relative; display: flex; flex-direction: column; gap: 10px; align-items: center; margin-top: 6px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6b7bff; letter-spacing: 0.2em;">REFERENCE CODE</span>
+            <div style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 15px 26px; font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 600; letter-spacing: 0.14em;">MDN-8F3K2</div>
+            <div style="border: 1px solid rgba(255,255,255,0.22); border-radius: 6px; padding: 11px 22px; font-size: 14px; color: #ffffff;">نسخ الكود</div>
+          </div>
+          <div style="position: relative; width: 100%; background: #ffffff; color: #021d2e; border-radius: 6px; padding: 15px 0; text-align: center; font-size: 15px; font-weight: 600; margin-top: 10px;">تتبع الطلب</div>
+        </div>
+      </div>
+
+      <div style="width: 390px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; overflow: hidden; background: linear-gradient(190deg, #021d2e, #032b42); padding: 28px 20px 40px; display: flex; flex-direction: column; gap: 24px; box-shadow: 0 40px 90px -40px rgba(2,29,46,1);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6b7bff; letter-spacing: 0.2em;">TRACK YOUR REQUEST</span>
+        <div style="font-size: 32px; font-weight: 300; color: #ffffff; line-height: 1.45;">تتبع طلبك</div>
+        <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 20px; background: rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; flex-direction: column; gap: 7px;"><span style="font-size: 12px; color: rgba(255,255,255,0.55);">الكود المرجعي</span><div style="border: 1px solid #010ed0; box-shadow: 0 0 0 3px rgba(1,14,208,0.22); border-radius: 6px; padding: 14px; background: rgba(2,29,46,0.6); font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #ffffff; letter-spacing: 0.12em;">MDN-8F3K2</div></div>
+          <div style="display: flex; flex-direction: column; gap: 7px;"><span style="font-size: 12px; color: rgba(255,255,255,0.55);">رقم الهاتف</span><div style="border: 1px solid rgba(255,255,255,0.14); border-radius: 6px; padding: 14px; background: rgba(2,29,46,0.6); font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: rgba(255,255,255,0.5);">+20 100 000 0000</div></div>
+          <div style="background: #dee0ff; color: #021d2e; border-radius: 6px; padding: 15px 0; text-align: center; font-size: 15px; font-weight: 600;">عرض حالة الطلب</div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 22px; background: rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 22px;">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 18px; color: #ffffff; letter-spacing: 0.1em;">MDN-8F3K2</span>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.55);">حجز وتأجير اليخوت · الغردقة</span>
+          </div>
+          <div style="height: 1px; background: rgba(255,255,255,0.07);"></div>
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 11px; height: 11px; border-radius: 6px; background: #010ed0;"></div><div style="width: 1px; height: 46px; background: #010ed0;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 15px; color: #ffffff;">وصل الطلب</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.4);">08-28 14:20</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 11px; height: 11px; border-radius: 6px; background: #010ed0;"></div><div style="width: 1px; height: 46px; background: #010ed0;"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 15px; color: #ffffff;">جاري المتابعة</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.4);">08-28 18:05</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 11px; height: 11px; border-radius: 6px; background: #010ed0; animation: mdnGlow 2.8s ease-in-out infinite;"></div><div style="width: 1px; height: 46px; background: rgba(255,255,255,0.12);"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 15px; color: #dee0ff; font-weight: 500;">جاري تجهيز عرض</span><span style="font-size: 12px; color: rgba(255,255,255,0.45);">الخطوة الحالية</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 11px; height: 11px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28);"></div><div style="width: 1px; height: 46px; background: rgba(255,255,255,0.12);"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 15px; color: rgba(255,255,255,0.4);">تم التواصل</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 11px; height: 11px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28);"></div><div style="width: 1px; height: 46px; background: rgba(255,255,255,0.12);"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 15px; color: rgba(255,255,255,0.4);">تم الاتفاق</span></div>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="display: flex; flex-direction: column; align-items: center; flex: none;"><div style="width: 11px; height: 11px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.28);"></div></div>
+              <div style="display: flex; flex-direction: column; gap: 4px; margin-top: -4px;"><span style="font-size: 15px; color: rgba(255,255,255,0.4);">تم الدفع</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;showDesignSystem&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;الأقسام&quot;},&quot;showAdmin&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;الأقسام&quot;},&quot;showMobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;الأقسام&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showDesignSystem: this.props.showDesignSystem ?? true,
+      showMobile: this.props.showMobile ?? true,
+      showAdmin: this.props.showAdmin ?? true
+    };
+  }
+}
+</script>
+
+
+</body></html>
