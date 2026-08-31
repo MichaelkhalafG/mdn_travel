@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TicketStatus {
+  RECEIVED         // en: Request received      | ar: وصل الطلب
+  IN_PROGRESS      // en: Being reviewed        | ar: جاري المتابعة
+  PREPARING_OFFER  // en: Preparing your offer  | ar: جاري تجهيز عرض
+  CONTACTED        // en: We contacted you      | ar: تم التواصل
+  AGREED           // en: Agreement reached     | ar: تم الاتفاق
+  NO_AGREEMENT     // en: No agreement          | ar: لم يتم الاتفاق
+  PAID             // en: Paid                  | ar: تم الدفع
+}
+
+enum ContactMethod {
+  WHATSAPP
+  PHONE
+  EMAIL
+}
+
+model Service {
+  id      String   @id @default(cuid())
+  slug    String   @unique
+  nameEn  String
+  nameAr  String
+  descEn  String
+  descAr  String
+  image   String
+  order   Int
+  tickets Ticket[]
+}
+
+model Ticket {
+  id            String        @id @default(cuid())
+  referenceCode String        @unique // format: MDN-XXXXX (A-Z0-9, no ambiguous chars)
+  service       Service       @relation(fields: [serviceId], references: [id])
+  serviceId     String
+  fullName      String
+  phone         String
+  email         String?
+  contactMethod ContactMethod
+  details       String
+  status        TicketStatus  @default(RECEIVED)
+  adminNotes    String?
+  statusEvents  StatusEvent[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+
+model StatusEvent {
+  id        String       @id @default(cuid())
+  ticket    Ticket       @relation(fields: [ticketId], references: [id])
+  ticketId  String
+  status    TicketStatus
+  createdAt DateTime     @default(now())
+}
+
+model AdminUser {
+  id           String @id @default(cuid())
+  email        String @unique
+  passwordHash String
+  name         String
+}

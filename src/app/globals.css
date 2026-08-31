@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Brand tokens (hard constraints — from MDN STACKMART, inverted for Travel).
+   Dark-first product. Deep navy is the canvas; white is text; royal blue is
+   rare and precious. NO gold, NO amber, NO glassmorphism, NO extra colors.
+--------------------------------------------------------------------------- */
+:root {
+  --navy: #032b42;            /* brand navy */
+  --navy-deep: #021d2e;       /* page bg base, gradient start */
+  --page-bg: #05090d;         /* outer canvas (from the design file) */
+  --accent: #010ed0;          /* royal blue — SPARINGLY: focus rings, active states, glows, small pills */
+  --accent-soft: #6b7bff;     /* ONLY as gradient terminus or mono-label color, never a fill */
+  --lavender: #dee0ff;        /* chips/tags bg, "TRAVEL" lockup text; navy text on it */
+  --danger: #cf222e;
+  --fg-on-dark: #ffffff;
+  --fg-on-dark-muted: rgba(255, 255, 255, 0.55);
+  --canvas-light: #ffffff;    /* admin app surfaces + form cards */
+  --canvas-subtle: #f6f8fa;
+  --border-light: #d5d8dc;
+  --border-on-dark: rgba(255, 255, 255, 0.06);
+  --radius: 6px;              /* EVERYWHERE. Uniform. No other radii. */
+
+  /* Shadows: large soft navy-tinted on marketing surfaces; flat in admin UI */
+  --shadow-marketing: 0 40px 90px -30px rgba(2, 29, 46, 0.9);
+}
+
+/* Expose tokens to Tailwind utilities (bg-navy, text-lavender, rounded-brand, …) */
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-page: var(--page-bg);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-lavender: var(--lavender);
+  --color-danger: var(--danger);
+  --color-fg-on-dark: var(--fg-on-dark);
+  --color-fg-on-dark-muted: var(--fg-on-dark-muted);
+  --color-canvas-light: var(--canvas-light);
+  --color-canvas-subtle: var(--canvas-subtle);
+  --color-border-light: var(--border-light);
+  --color-border-on-dark: var(--border-on-dark);
+
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --radius-brand: var(--radius);
+
+  --shadow-marketing: var(--shadow-marketing);
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--fg-on-dark);
+  font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Font stack switches per locale; Latin chars inside Arabic text fall back to
+   Space Grotesk (IBM Plex Sans Arabic is loaded with the arabic subset only). */
+html[lang="ar"] body {
+  font-family: var(--font-plex-arabic), var(--font-space-grotesk), ui-sans-serif,
+    system-ui, sans-serif;
+}
+
+/* Headings: Space Grotesk tracking -0.03em (Latin only — never track Arabic) */
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.03em;
+}
+
+html[lang="ar"] :is(h1, h2, h3, h4) {
+  letter-spacing: 0;
+}
+
+/* Numbers, reference codes, prices — IBM Plex Mono in BOTH locales */
+.mono {
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Dark gradient panel: navy gradient + radial royal-blue bloom */
+.panel-dark {
+  background:
+    radial-gradient(
+      600px 320px at 80% -10%,
+      rgba(1, 14, 208, 0.35),
+      transparent 60%
+    ),
+    linear-gradient(160deg, #021d2e 0%, #032b42 100%);
+  border: 1px solid var(--border-on-dark);
+  border-radius: var(--radius);
+}
+
+/* Faint 1px grid motif (white @5%) for dark panels */
+.grid-motif {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

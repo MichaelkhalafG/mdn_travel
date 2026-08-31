@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "title": "MDN Travel — Luxury Concierge & Booking Requests",
+    "description": "Pick a service, open a request, and our team handles everything for you."
+  },
+  "brand": {
+    "name": "MDN",
+    "suffix": "TRAVEL"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "track": "Track your request"
+  },
+  "home": {
+    "heroTitle": "Luxury travel, handled for you",
+    "heroTagline": "Pick a service, open a request, and our concierge team takes care of the rest — no accounts, no payments online.",
+    "sampleReferenceLabel": "Reference",
+    "placeholderNote": "Placeholder page — the full experience is on its way.",
+    "cta": "Explore services"
+  },
+  "status": {
+    "RECEIVED": "Request received",
+    "IN_PROGRESS": "Being reviewed",
+    "PREPARING_OFFER": "Preparing your offer",
+    "CONTACTED": "We contacted you",
+    "AGREED": "Agreement reached",
+    "NO_AGREEMENT": "No agreement",
+    "PAID": "Paid"
+  },
+  "contactMethod": {
+    "WHATSAPP": "WhatsApp",
+    "PHONE": "Phone",
+    "EMAIL": "Email"
+  },
+  "request": {
+    "title": "Open a request",
+    "fullName": "Full name",
+    "phone": "Phone number",
+    "email": "Email (optional)",
+    "contactMethod": "Preferred contact method",
+    "details": "Tell us what you need",
+    "submit": "Send request",
+    "submitting": "Sending…"
+  },
+  "track": {
+    "title": "Track your request",
+    "referenceCode": "Reference code",
+    "phone": "Phone number",
+    "submit": "Track",
+    "notFound": "We couldn't find a request matching that code and phone number."
+  },
+  "admin": {
+    "login": {
+      "title": "Admin sign in",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "invalidCredentials": "Invalid email or password."
+    },
+    "dashboard": {
+      "title": "Dashboard"
+    }
+  },
+  "errors": {
+    "required": "This field is required.",
+    "invalidEmail": "Please enter a valid email address.",
+    "invalidPhone": "Please enter a valid phone number.",
+    "tooShort": "This is too short.",
+    "tooLong": "This is too long."
+  },
+  "footer": {
+    "rights": "© {year} MDN Travel. All rights reserved."
+  }
+}
