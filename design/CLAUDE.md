@@ -46,6 +46,11 @@ Dark-first product. Deep navy is the canvas; white is text; royal blue is rare a
 --border-light: #d5d8dc;
 --border-on-dark: rgba(255,255,255,0.06);
 --radius: 6px;              /* EVERYWHERE. Uniform. No other radii. */
+--mono-label: #8a94a3;          /* mono section labels + muted meta, both surfaces */
+--fg-on-light-muted: #57606a;   /* muted text on light surfaces */
+--border-light-subtle: #eaeef2; /* table row hairlines on light surfaces */
+/* neutral grays extracted from the design file — allowed. The "no extra colors"
+   rule forbids new BRAND colors (gold, amber, etc.), not neutral shades. */
 ```
 
 - Dark gradient panels: `linear-gradient(160deg, #021d2e 0%, #032b42 100%)` + radial royal-blue blooms + faint 1px grid motif (white @5%).
@@ -117,6 +122,7 @@ model AdminUser {
 ```
 
 - Status flow: RECEIVED → IN_PROGRESS → PREPARING_OFFER → CONTACTED → (AGREED | NO_AGREEMENT) → PAID. Admin can move freely, but every change creates a StatusEvent.
+- StatusBadge: CONTACTED uses the same royal-outline badge family as IN_PROGRESS and PREPARING_OFFER (in-flight states) — a deliberate, approved inference; the design file never shows a CONTACTED badge.
 - The 9 services are seed data (no admin CRUD in v1):
   1. hotels-resorts — Hotels & Resorts — حجوزات الفنادق والمنتجعات
   2. apartments-suites — Apartments & Hotel Suites — الشقق والأجنحة الفندقية
