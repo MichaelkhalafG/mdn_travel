@@ -59,7 +59,7 @@ Dark-first product. Deep navy is the canvas; white is text; royal blue is rare a
 - Logo lockup: "MDN" (Space Grotesk 700) + 1px vertical hairline + "TRAVEL" (Space Grotesk 600, letter-spacing 0.26em, lavender on dark).
 - Primary CTAs on dark = white or lavender button with navy text. Royal blue is for moments, not defaults.
 - NO gold, NO amber, NO glassmorphism, NO extra colors.
-- The full hi-fi design reference lives at `design/MDN_Travel.html` — open it when unsure about any screen.
+- The design source of truth is `design/template.html` (extracted markup — read this). The original bundle is `design/MDN Travel.html` (note the space); if template.html is ever missing, regenerate it with: `node scripts/extract-design.mjs`
 
 ## Data model (Prisma)
 
