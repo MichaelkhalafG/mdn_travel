@@ -145,7 +145,7 @@ export function HeroRotator({
       {rotating ? (
         <div
           aria-hidden
-          className="absolute bottom-6 start-5 z-10 flex items-center gap-6 md:bottom-10 md:start-14"
+          className="absolute bottom-[calc(1.25rem_+_env(safe-area-inset-bottom))] start-5 z-10 flex items-center gap-6 md:bottom-10 md:start-14"
         >
           {/* dir=ltr: bidi isolation so "01 / 04" doesn't reorder in RTL */}
           <span dir="ltr" className="mono text-xs text-fg-on-dark/45">

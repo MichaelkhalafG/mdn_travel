@@ -167,6 +167,27 @@ html[lang="ar"] :is(h1, h2, h3, h4) {
   );
 }
 
+/* Local darkening behind the hero text block (inline-start side) so the
+   eyebrow and headline hold contrast over bright video frames — strengthens
+   the scrim where the text sits instead of tinting the label color. */
+.hero-text-scrim {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 29, 46, 0.6) 0%,
+    rgba(2, 29, 46, 0.3) 45%,
+    rgba(2, 29, 46, 0) 72%
+  );
+}
+
+[dir="rtl"] .hero-text-scrim {
+  background: linear-gradient(
+    270deg,
+    rgba(2, 29, 46, 0.6) 0%,
+    rgba(2, 29, 46, 0.3) 45%,
+    rgba(2, 29, 46, 0) 72%
+  );
+}
+
 .bloom-stats {
   background: radial-gradient(
     70% 120% at 85% 100%,
