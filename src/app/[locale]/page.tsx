@@ -45,14 +45,18 @@ export default async function HomePage({
       {/* Hero — cinematic image under navy scrim, per 02 — LANDING */}
       <section className="hero-base relative overflow-hidden">
         <MediaImage
-          src="/img/hero.jpg"
+          src="/img/hero.webp"
           alt={t("heroImageAlt")}
           fallback="none"
           sizes="100vw"
           priority
           className="absolute inset-0"
         />
-        <HeroVideo src="/img/hero.mp4" poster="/img/hero.jpg" />
+        <HeroVideo
+          webmSrc="/img/hero.webm"
+          mp4Src="/img/hero.mp4"
+          poster="/img/hero.webp"
+        />
         <div aria-hidden className="bloom-hero pointer-events-none absolute inset-0" />
         <div aria-hidden className="grid-motif-lg pointer-events-none absolute inset-0" />
         <div aria-hidden className="hero-scrim pointer-events-none absolute inset-0" />

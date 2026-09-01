@@ -5,17 +5,22 @@ import { cn } from "@/lib/cn";
 
 // Ambient hero video layer. Renders nothing (so nothing downloads) until we
 // know the user allows motion; prefers-reduced-motion users keep the static
-// poster image underneath. Decorative — the poster image carries the alt.
+// poster image underneath. preload="metadata" so the poster carries LCP; the
+// video fades in only once it can actually play. Decorative — the poster
+// image carries the alt.
 export function HeroVideo({
-  src,
+  webmSrc,
+  mp4Src,
   poster,
   className,
 }: {
-  src: string;
+  webmSrc: string;
+  mp4Src: string;
   poster: string;
   className?: string;
 }) {
   const [motionOk, setMotionOk] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -28,14 +33,22 @@ export function HeroVideo({
   if (!motionOk) return null;
   return (
     <video
-      src={src}
       poster={poster}
+      preload="metadata"
       autoPlay
       muted
       loop
       playsInline
       aria-hidden
-      className={cn("absolute inset-0 size-full object-cover", className)}
-    />
+      onCanPlay={() => setReady(true)}
+      className={cn(
+        "absolute inset-0 size-full object-cover transition-opacity duration-700",
+        ready ? "opacity-100" : "opacity-0",
+        className
+      )}
+    >
+      <source src={webmSrc} type="video/webm" />
+      <source src={mp4Src} type="video/mp4" />
+    </video>
   );
 }
