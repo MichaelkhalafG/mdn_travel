@@ -12,12 +12,13 @@ import {
   Textarea,
   Timeline,
 } from "@/components/ui";
+import { MonoLabel } from "@/components/ui";
 import { TICKET_STATUSES } from "@/lib/status";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mono text-[11px] font-normal tracking-[0.16em] text-mono-label">
-      {children}
+    <h2 className="font-normal">
+      <MonoLabel className="tracking-[0.16em]">{children}</MonoLabel>
     </h2>
   );
 }

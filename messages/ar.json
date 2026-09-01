@@ -10,14 +10,39 @@
   "nav": {
     "home": "الرئيسية",
     "services": "الخدمات",
-    "track": "تتبّع طلبك"
+    "track": "تتبع الطلب",
+    "about": "عن المنصة",
+    "requestCta": "اطلب خدمتك",
+    "localeSwitch": "EN",
+    "menu": "القائمة"
   },
   "home": {
-    "heroTitle": "سفر فاخر، نتولاه عنك",
-    "heroTagline": "اختر الخدمة، افتح طلبًا، وفريق الكونسيرج لدينا يتكفّل بالباقي — بلا حسابات وبلا دفع إلكتروني.",
-    "sampleReferenceLabel": "رقم المرجع",
-    "placeholderNote": "صفحة مؤقتة — التجربة الكاملة قادمة قريبًا.",
-    "cta": "استكشف الخدمات"
+    "eyebrow": "PRIVATE CONCIERGE · SINCE 2014",
+    "heroTitleLine1": "رحلتك تبدأ من هنا…",
+    "heroTitleLine2": "ونحن نهتم بكل التفاصيل",
+    "heroTagline": "أخبرنا بما تحتاجه، ويتولّى فريق الكونسيرج الترتيب كاملًا — من الإقامة واليخوت حتى الفعاليات الخاصة.",
+    "heroImageAlt": "يخت عند الغروب",
+    "ctaRequest": "اطلب خدمتك",
+    "ctaTrack": "تتبع طلبك",
+    "servicesEyebrow": "OUR SERVICES",
+    "servicesTitle": "تسع خدمات، فريق واحد يتابعها",
+    "servicesLead": "اختر الخدمة التي تحتاجها وسنعود إليك بعرض مُفصّل خلال ساعات.",
+    "howEyebrow": "HOW IT WORKS",
+    "howTitle": "ثلاث خطوات، وننهي الباقي عنك",
+    "step1Title": "اختار خدمتك",
+    "step1Desc": "تسع خدمات كونسيرج، من الإقامة حتى الفعاليات الخاصة.",
+    "step2Title": "احكيلنا طلبك",
+    "step2Desc": "نموذج قصير: بياناتك، طريقة التواصل المفضلة، وتفاصيل الطلب.",
+    "step3Title": "فريقنا يتواصل معك",
+    "step3Desc": "نرتّب كل شيء ونبقى معك حتى انتهاء الخدمة بالكامل.",
+    "stat1Value": "12",
+    "stat1Label": "عامًا من الخدمة الخاصة",
+    "stat2Value": "4,800",
+    "stat2Label": "طلب أُنجز بالكامل",
+    "stat3Value": "6h",
+    "stat3Label": "متوسط زمن الرد",
+    "stat4Value": "96%",
+    "stat4Label": "عملاء يعودون إلينا"
   },
   "status": {
     "RECEIVED": "وصل الطلب",
@@ -70,7 +95,23 @@
     "tooLong": "النص طويل جدًا."
   },
   "footer": {
-    "rights": "© {year} MDN Travel. جميع الحقوق محفوظة."
+    "tagline": "كونسيرج خاص للسفر والفعاليات. جزء من عائلة MDN.",
+    "colServices": "SERVICES",
+    "colPlatform": "PLATFORM",
+    "colContact": "CONTACT",
+    "linkHotels": "الفنادق والمنتجعات",
+    "linkYachts": "اليخوت",
+    "linkConferences": "المؤتمرات والفعاليات",
+    "linkBusiness": "خدمات رجال الأعمال",
+    "linkTrack": "تتبع الطلب",
+    "linkAbout": "عن المنصة",
+    "linkFaq": "الأسئلة الشائعة",
+    "linkPrivacy": "سياسة الخصوصية",
+    "phone": "+20 100 000 0000",
+    "email": "care@mdn.travel",
+    "cities": "القاهرة · دبي · جدة",
+    "copyright": "© 2026 MDN GROUP",
+    "rights": "جميع الحقوق محفوظة"
   },
   "devUi": {
     "title": "مكتبة المكوّنات",

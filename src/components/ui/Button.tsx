@@ -1,8 +1,9 @@
 import type { ComponentProps } from "react";
+import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/cn";
 
 type ButtonVariant = "primary" | "lavender" | "ghost" | "accent" | "danger";
-type ButtonSize = "md" | "sm";
+type ButtonSize = "lg" | "md" | "sm";
 
 // Per design/template.html "BUTTONS ON DARK": white/lavender fills carry
 // navy-deep text; royal blue is reserved for active moments (glowing);
@@ -16,9 +17,23 @@ const variantClasses: Record<ButtonVariant, string> = {
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
+  lg: "px-10 py-[17px] text-base",
   md: "px-[30px] py-3.5 text-[15px]",
   sm: "px-[22px] py-2.5 text-sm",
 };
+
+function buttonClasses(
+  variant: ButtonVariant,
+  size: ButtonSize,
+  className?: string
+) {
+  return cn(
+    "inline-flex items-center justify-center rounded-brand outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-accent/40",
+    variantClasses[variant],
+    sizeClasses[size],
+    className
+  );
+}
 
 export function Button({
   variant = "primary",
@@ -34,13 +49,23 @@ export function Button({
     <button
       type={type}
       className={cn(
-        "rounded-brand outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-accent/40",
-        variantClasses[variant],
-        sizeClasses[size],
-        "disabled:border-0 disabled:bg-fg-on-dark/6 disabled:text-fg-on-dark/35 disabled:font-medium disabled:animate-none disabled:shadow-none",
-        className
+        buttonClasses(variant, size, className),
+        "disabled:border-0 disabled:bg-fg-on-dark/6 disabled:text-fg-on-dark/35 disabled:font-medium disabled:animate-none disabled:shadow-none"
       )}
       {...props}
     />
   );
+}
+
+// Locale-aware link with button styling (CTAs, anchors to page sections).
+export function ButtonLink({
+  variant = "primary",
+  size = "md",
+  className,
+  ...props
+}: ComponentProps<typeof Link> & {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+}) {
+  return <Link className={buttonClasses(variant, size, className)} {...props} />;
 }

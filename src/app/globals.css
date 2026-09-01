@@ -113,6 +113,80 @@ html[lang="ar"] :is(h1, h2, h3, h4) {
     linear-gradient(160deg, #021d2e 0%, #032b42 100%);
 }
 
+/* Landing treatments from design/template.html (02 — LANDING / 10 — MOBILE).
+   Blooms sit at the inline-end corner, so they mirror for RTL. */
+.hero-base {
+  background-image:
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.05) 0 1px,
+      transparent 1px 14px
+    ),
+    linear-gradient(200deg, var(--navy-deep), var(--navy));
+}
+
+.media-fallback {
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0 1px,
+      transparent 1px 12px
+    ),
+    linear-gradient(160deg, var(--navy-deep), var(--navy));
+}
+
+.grid-motif-lg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 96px 96px;
+}
+
+.bloom-hero {
+  background: radial-gradient(
+    90% 120% at 78% 8%,
+    rgba(1, 14, 208, 0.5) 0%,
+    rgba(2, 29, 46, 0) 58%
+  );
+}
+
+[dir="rtl"] .bloom-hero {
+  background: radial-gradient(
+    90% 120% at 22% 8%,
+    rgba(1, 14, 208, 0.5) 0%,
+    rgba(2, 29, 46, 0) 58%
+  );
+}
+
+.hero-scrim {
+  background: linear-gradient(
+    to top,
+    rgba(2, 29, 46, 0.95) 0%,
+    rgba(2, 29, 46, 0.35) 55%,
+    rgba(2, 29, 46, 0.6) 100%
+  );
+}
+
+.bloom-stats {
+  background: radial-gradient(
+    70% 120% at 85% 100%,
+    rgba(1, 14, 208, 0.4) 0%,
+    rgba(2, 29, 46, 0) 60%
+  );
+}
+
+[dir="rtl"] .bloom-stats {
+  background: radial-gradient(
+    70% 120% at 15% 100%,
+    rgba(1, 14, 208, 0.4) 0%,
+    rgba(2, 29, 46, 0) 60%
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Royal-blue pulse for active states and the current timeline step */
 @keyframes mdn-glow {
   0%,

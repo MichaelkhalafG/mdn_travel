@@ -10,7 +10,7 @@ const services = [
     nameAr: "حجوزات الفنادق والمنتجعات",
     descEn: "Handpicked stays at the world's finest hotels and resorts, booked and negotiated for you.",
     descAr: "إقامات مختارة بعناية في أرقى الفنادق والمنتجعات حول العالم، نحجزها ونتفاوض عليها من أجلك.",
-    image: "/images/services/hotels-resorts.jpg",
+    image: "/img/services/hotels-resorts.jpg",
     order: 1,
   },
   {
@@ -19,7 +19,7 @@ const services = [
     nameAr: "الشقق والأجنحة الفندقية",
     descEn: "Serviced apartments and premium hotel suites for longer, more private stays.",
     descAr: "شقق مخدومة وأجنحة فندقية فاخرة لإقامات أطول وأكثر خصوصية.",
-    image: "/images/services/apartments-suites.jpg",
+    image: "/img/services/apartments-suites.jpg",
     order: 2,
   },
   {
@@ -28,7 +28,7 @@ const services = [
     nameAr: "حجز وتأجير اليخوت",
     descEn: "Private yacht charters with full crew, itinerary planning, and onboard hospitality.",
     descAr: "تأجير يخوت خاصة بطاقم كامل مع تخطيط المسار وخدمات الضيافة على متن اليخت.",
-    image: "/images/services/yachts.jpg",
+    image: "/img/services/yachts.jpg",
     order: 3,
   },
   {
@@ -37,7 +37,7 @@ const services = [
     nameAr: "تأجير السيارات",
     descEn: "Luxury and executive vehicles, with or without chauffeur, delivered where you need them.",
     descAr: "سيارات فاخرة وتنفيذية، مع سائق أو بدونه، تصل إلى حيث تحتاجها.",
-    image: "/images/services/car-rental.jpg",
+    image: "/img/services/car-rental.jpg",
     order: 4,
   },
   {
@@ -46,7 +46,7 @@ const services = [
     nameAr: "تنظيم المؤتمرات والفعاليات",
     descEn: "End-to-end planning and production for conferences and corporate events.",
     descAr: "تخطيط وتنفيذ متكامل للمؤتمرات والفعاليات المؤسسية من البداية إلى النهاية.",
-    image: "/images/services/conferences-events.jpg",
+    image: "/img/services/conferences-events.jpg",
     order: 5,
   },
   {
@@ -55,7 +55,7 @@ const services = [
     nameAr: "تنظيم الحفلات والمهرجانات",
     descEn: "Unforgettable private parties and festivals, designed and managed down to the last detail.",
     descAr: "حفلات خاصة ومهرجانات لا تُنسى، نصممها وندير كل تفاصيلها.",
-    image: "/images/services/parties-festivals.jpg",
+    image: "/img/services/parties-festivals.jpg",
     order: 6,
   },
   {
@@ -64,7 +64,7 @@ const services = [
     nameAr: "تنظيم وإدارة المعارض",
     descEn: "Exhibition planning, stand production, and on-site management for brands and organizers.",
     descAr: "تخطيط المعارض وتجهيز الأجنحة والإدارة الميدانية للعلامات التجارية والمنظمين.",
-    image: "/images/services/exhibitions.jpg",
+    image: "/img/services/exhibitions.jpg",
     order: 7,
   },
   {
@@ -73,7 +73,7 @@ const services = [
     nameAr: "خدمات رجال الأعمال",
     descEn: "Executive travel support: meetings, protocol, transport, and business logistics.",
     descAr: "دعم سفر تنفيذي: اجتماعات، مراسم، تنقلات، وخدمات لوجستية للأعمال.",
-    image: "/images/services/business-services.jpg",
+    image: "/img/services/business-services.jpg",
     order: 8,
   },
   {
@@ -82,7 +82,7 @@ const services = [
     nameAr: "الخدمات الترفيهية والسياحية",
     descEn: "Curated leisure experiences, tours, and activities tailored to your taste.",
     descAr: "تجارب ترفيهية وجولات وأنشطة سياحية منسقة حسب ذوقك.",
-    image: "/images/services/leisure-tourism.jpg",
+    image: "/img/services/leisure-tourism.jpg",
     order: 9,
   },
 ];

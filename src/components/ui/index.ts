@@ -1,4 +1,8 @@
-export { Button } from "./Button";
+export { Button, ButtonLink } from "./Button";
+export { MonoLabel } from "./MonoLabel";
+export { MediaImage } from "./MediaImage";
+export { ServiceCard } from "./ServiceCard";
+export { StatStrip } from "./StatStrip";
 export { Input } from "./Input";
 export { Textarea } from "./Textarea";
 export { Select } from "./Select";

@@ -10,14 +10,39 @@
   "nav": {
     "home": "Home",
     "services": "Services",
-    "track": "Track your request"
+    "track": "Track request",
+    "about": "About",
+    "requestCta": "Request your service",
+    "localeSwitch": "العربية",
+    "menu": "Menu"
   },
   "home": {
-    "heroTitle": "Luxury travel, handled for you",
-    "heroTagline": "Pick a service, open a request, and our concierge team takes care of the rest — no accounts, no payments online.",
-    "sampleReferenceLabel": "Reference",
-    "placeholderNote": "Placeholder page — the full experience is on its way.",
-    "cta": "Explore services"
+    "eyebrow": "PRIVATE CONCIERGE · SINCE 2014",
+    "heroTitleLine1": "Your journey starts here…",
+    "heroTitleLine2": "we look after every detail",
+    "heroTagline": "Tell us what you need — our concierge team arranges it all, from stays and yachts to private events.",
+    "heroImageAlt": "Yacht at dusk",
+    "ctaRequest": "Request your service",
+    "ctaTrack": "Track your request",
+    "servicesEyebrow": "OUR SERVICES",
+    "servicesTitle": "Nine services, one team behind them",
+    "servicesLead": "Choose the service you need and we'll come back with a detailed offer within hours.",
+    "howEyebrow": "HOW IT WORKS",
+    "howTitle": "Three steps — we finish the rest",
+    "step1Title": "Choose your service",
+    "step1Desc": "Nine concierge services, from stays to private events.",
+    "step2Title": "Tell us your request",
+    "step2Desc": "A short form: your details, preferred contact method, and what you need.",
+    "step3Title": "We take it from there",
+    "step3Desc": "We arrange everything and stay with you until your service is complete.",
+    "stat1Value": "12",
+    "stat1Label": "years of private service",
+    "stat2Value": "4,800",
+    "stat2Label": "requests completed end to end",
+    "stat3Value": "6h",
+    "stat3Label": "average response time",
+    "stat4Value": "96%",
+    "stat4Label": "clients who return"
   },
   "status": {
     "RECEIVED": "Request received",
@@ -70,7 +95,23 @@
     "tooLong": "This is too long."
   },
   "footer": {
-    "rights": "© {year} MDN Travel. All rights reserved."
+    "tagline": "Private concierge for travel and events. Part of the MDN family.",
+    "colServices": "SERVICES",
+    "colPlatform": "PLATFORM",
+    "colContact": "CONTACT",
+    "linkHotels": "Hotels & Resorts",
+    "linkYachts": "Yachts",
+    "linkConferences": "Conferences & Events",
+    "linkBusiness": "Business Services",
+    "linkTrack": "Track request",
+    "linkAbout": "About the platform",
+    "linkFaq": "FAQ",
+    "linkPrivacy": "Privacy policy",
+    "phone": "+20 100 000 0000",
+    "email": "care@mdn.travel",
+    "cities": "Cairo · Dubai · Jeddah",
+    "copyright": "© 2026 MDN GROUP",
+    "rights": "All rights reserved"
   },
   "devUi": {
     "title": "Component library",

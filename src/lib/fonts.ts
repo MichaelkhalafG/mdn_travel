@@ -11,7 +11,7 @@ export const spaceGrotesk = Space_Grotesk({
 // fall through the stack to Space Grotesk.
 export const plexArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-plex-arabic",
   display: "swap",
 });
