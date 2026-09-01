@@ -1,7 +1,7 @@
 export { Button, ButtonLink } from "./Button";
 export { MonoLabel } from "./MonoLabel";
 export { MediaImage } from "./MediaImage";
-export { HeroVideo } from "./HeroVideo";
+export { HeroRotator } from "./HeroRotator";
 export { ServiceCard } from "./ServiceCard";
 export { StatStrip } from "./StatStrip";
 export { Input } from "./Input";

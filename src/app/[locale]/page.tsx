@@ -4,8 +4,7 @@ import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import {
   ButtonLink,
-  HeroVideo,
-  MediaImage,
+  HeroRotator,
   MonoLabel,
   ServiceCard,
   StatStrip,
@@ -25,6 +24,21 @@ export default async function HomePage({
     orderBy: { order: "asc" },
   });
 
+  // rotating hero slides 2-4: the most cinematic service stills
+  const heroStills = ["yachts", "hotels-resorts", "leisure-tourism"].flatMap(
+    (slug) => {
+      const service = services.find((s) => s.slug === slug);
+      return service
+        ? [
+            {
+              src: service.image,
+              alt: locale === "ar" ? service.nameAr : service.nameEn,
+            },
+          ]
+        : [];
+    }
+  );
+
   const steps = [
     { title: t("step1Title"), desc: t("step1Desc") },
     { title: t("step2Title"), desc: t("step2Desc") },
@@ -42,39 +56,33 @@ export default async function HomePage({
     <div className="bg-navy-deep">
       <SiteNav />
 
-      {/* Hero — cinematic image under navy scrim, per 02 — LANDING */}
+      {/* Hero — rotating cinematic media under navy scrim, per 02 — LANDING */}
       <section className="hero-base relative overflow-hidden">
-        <MediaImage
-          src="/img/hero.webp"
-          alt={t("heroImageAlt")}
-          fallback="none"
-          sizes="100vw"
-          priority
-          className="absolute inset-0"
-        />
-        <HeroVideo
-          webmSrc="/img/hero.webm"
-          mp4Src="/img/hero.mp4"
+        <HeroRotator
+          video={{ webm: "/img/hero.webm", mp4: "/img/hero.mp4" }}
           poster="/img/hero.webp"
+          posterAlt={t("heroImageAlt")}
+          stills={heroStills}
+          className="absolute inset-0"
         />
         <div aria-hidden className="bloom-hero pointer-events-none absolute inset-0" />
         <div aria-hidden className="grid-motif-lg pointer-events-none absolute inset-0" />
         <div aria-hidden className="hero-scrim pointer-events-none absolute inset-0" />
-        <div className="relative mx-auto flex min-h-[470px] max-w-[1440px] flex-col justify-end gap-6 px-5 pb-10 md:min-h-[720px] md:justify-center md:gap-8 md:px-14 md:pb-0">
-          <p className="flex items-center gap-3">
+        <div className="relative mx-auto flex min-h-[470px] max-w-[1440px] flex-col justify-end gap-6 px-5 pb-16 md:min-h-[720px] md:justify-center md:gap-8 md:px-14 md:pb-0">
+          <p className="hero-rise flex items-center gap-3">
             <span aria-hidden className="h-px w-7 bg-accent-soft max-md:hidden" />
             <MonoLabel tone="accent" className="tracking-[0.22em]">
               {t("eyebrow")}
             </MonoLabel>
           </p>
-          <h1 className="max-w-[900px] text-[38px] leading-[1.35] font-light text-fg-on-dark md:text-[76px] md:leading-[1.3]">
+          <h1 className="hero-rise max-w-[900px] text-[38px] leading-[1.35] font-light text-pretty text-fg-on-dark [animation-delay:90ms] md:text-[76px] md:leading-[1.3]">
             {t("heroTitleLine1")} <br className="max-md:hidden" />
             {t("heroTitleLine2")}
           </h1>
-          <p className="max-w-[620px] text-[15px] leading-loose text-fg-on-dark/68 md:text-[19px] md:leading-[2.1]">
+          <p className="hero-rise max-w-[620px] text-[15px] leading-loose text-fg-on-dark/68 [animation-delay:180ms] md:text-[19px] md:leading-[2.1]">
             {t("heroTagline")}
           </p>
-          <div className="flex flex-col gap-3.5 sm:flex-row sm:items-center sm:gap-4.5">
+          <div className="hero-rise flex flex-col gap-3.5 [animation-delay:270ms] sm:flex-row sm:items-center sm:gap-4.5">
             <ButtonLink href="/#services" size="lg">
               {t("ctaRequest")}
             </ButtonLink>

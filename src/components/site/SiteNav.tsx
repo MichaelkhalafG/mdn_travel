@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { ButtonLink, LogoLockup } from "@/components/ui";
@@ -13,6 +13,16 @@ const linkClass =
 export function SiteNav() {
   const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
+  const [solid, setSolid] = useState(false);
+
+  // translucent over the hero, solid navy-deep once scrolled past it
+  useEffect(() => {
+    const onScroll = () =>
+      setSolid(window.scrollY > (window.innerWidth >= 768 ? 640 : 400));
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const links = (
     <>
@@ -32,7 +42,12 @@ export function SiteNav() {
   );
 
   return (
-    <header className="border-b border-border-on-dark bg-navy-deep/70">
+    <header
+      className={cn(
+        "sticky top-0 z-40 border-b border-border-on-dark transition-colors duration-300",
+        solid || open ? "bg-navy-deep" : "bg-navy-deep/70"
+      )}
+    >
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 md:px-14 md:py-6">
         <Link href="/" className="outline-none focus-visible:ring-[3px] focus-visible:ring-accent/40">
           <LogoLockup size="sm" />

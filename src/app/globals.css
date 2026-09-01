@@ -187,6 +187,51 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Rotating hero (02 — LANDING): slow Ken Burns on stills, pager progress
+   fill, and the one-time staggered entrance. All collapse to their final
+   state instantly under prefers-reduced-motion via the global override. */
+@keyframes mdn-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+.kenburns {
+  animation: mdn-kenburns 8.2s ease-out forwards;
+}
+
+@keyframes mdn-progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progress-fill {
+  animation: mdn-progress 7s linear forwards;
+}
+
+@keyframes mdn-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-rise {
+  opacity: 0;
+  animation: mdn-rise 420ms ease-out forwards;
+}
+
 /* Royal-blue pulse for active states and the current timeline step */
 @keyframes mdn-glow {
   0%,
