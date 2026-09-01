@@ -4,6 +4,7 @@ import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import {
   ButtonLink,
+  HeroVideo,
   MediaImage,
   MonoLabel,
   ServiceCard,
@@ -47,8 +48,11 @@ export default async function HomePage({
           src="/img/hero.jpg"
           alt={t("heroImageAlt")}
           fallback="none"
+          sizes="100vw"
+          priority
           className="absolute inset-0"
         />
+        <HeroVideo src="/img/hero.mp4" poster="/img/hero.jpg" />
         <div aria-hidden className="bloom-hero pointer-events-none absolute inset-0" />
         <div aria-hidden className="grid-motif-lg pointer-events-none absolute inset-0" />
         <div aria-hidden className="hero-scrim pointer-events-none absolute inset-0" />

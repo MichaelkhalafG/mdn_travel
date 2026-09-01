@@ -1,21 +1,27 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/cn";
 
-// Image with the navy hatch fallback painted underneath, so a missing asset
-// never flashes broken — the brand gradient shows instead.
+// next/image with the navy hatch fallback painted underneath, so a missing
+// asset never flashes broken — the brand gradient shows instead.
 export function MediaImage({
   src,
   alt,
   className,
   fallback = "hatch",
+  sizes = "100vw",
+  priority = false,
 }: {
   src: string;
   alt: string;
   className?: string;
   /** "none" when the parent already paints its own navy base (hero) */
   fallback?: "hatch" | "none";
+  /** next/image sizes attribute — set from the layout so cards don't ship full-res */
+  sizes?: string;
+  priority?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
   return (
@@ -27,18 +33,14 @@ export function MediaImage({
       )}
     >
       {!failed ? (
-        // Plain <img>: placeholder assets may not exist yet; onError degrades
-        // to the navy fallback instead of a broken-image glyph. The ref check
-        // catches images that already failed before hydration attached onError.
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        <Image
           src={src}
           alt={alt}
-          ref={(el) => {
-            if (el?.complete && el.naturalWidth === 0) setFailed(true);
-          }}
+          fill
+          sizes={sizes}
+          priority={priority}
           onError={() => setFailed(true)}
-          className="absolute inset-0 size-full object-cover"
+          className="object-cover"
         />
       ) : null}
     </span>

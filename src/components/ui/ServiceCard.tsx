@@ -27,7 +27,12 @@ export function ServiceCard({
         className
       )}
     >
-      <MediaImage src={image} alt={name} className="h-[150px] md:h-[190px]" />
+      <MediaImage
+        src={image}
+        alt={name}
+        sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw"
+        className="h-[150px] md:h-[190px]"
+      />
       <span className="flex items-center justify-between gap-3 p-4.5 md:p-6">
         <span className="text-[17px] font-medium text-fg-on-dark md:text-[19px]">
           {name}
