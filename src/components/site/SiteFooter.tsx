@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { LogoLockup, MeridianLayer, MonoLabel } from "@/components/ui";
+import { Eyebrow, LogoLockup, MeridianLayer } from "@/components/ui";
 
 const itemClass =
   "text-sm text-fg-on-dark/62 transition-colors hover:text-fg-on-dark";
@@ -22,7 +22,7 @@ export function SiteFooter() {
           </div>
 
           <div className="flex flex-col gap-3.5">
-            <MonoLabel tone="accent">{t("colServices")}</MonoLabel>
+            <Eyebrow>{t("colServices")}</Eyebrow>
             <Link href="/services/hotels-resorts" className={itemClass}>
               {t("linkHotels")}
             </Link>
@@ -38,7 +38,7 @@ export function SiteFooter() {
           </div>
 
           <div className="flex flex-col gap-3.5">
-            <MonoLabel tone="accent">{t("colPlatform")}</MonoLabel>
+            <Eyebrow>{t("colPlatform")}</Eyebrow>
             <Link href="/track" className={itemClass}>
               {t("linkTrack")}
             </Link>
@@ -54,7 +54,7 @@ export function SiteFooter() {
           </div>
 
           <div className="flex flex-col gap-3.5">
-            <MonoLabel tone="accent">{t("colContact")}</MonoLabel>
+            <Eyebrow>{t("colContact")}</Eyebrow>
             <span className="mono text-sm text-fg-on-dark/62" dir="ltr">
               {t("phone")}
             </span>

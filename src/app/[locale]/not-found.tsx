@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { ButtonLink, ContourLayer, MonoLabel } from "@/components/ui";
+import { ButtonLink, ContourLayer, Eyebrow } from "@/components/ui";
 
 // Styled, localized 404 — catches notFound() from unknown service slugs and
 // reference codes anywhere under /[locale].
@@ -15,9 +15,7 @@ export default async function NotFoundPage() {
         <div aria-hidden className="bloom-top pointer-events-none absolute inset-0" />
         <ContourLayer />
         <div className="relative flex max-w-[560px] flex-col items-center gap-6 text-center">
-          <MonoLabel tone="accent" className="tracking-[0.24em]">
-            {t("eyebrow")}
-          </MonoLabel>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h1 className="text-[34px] leading-[1.4] font-light text-fg-on-dark md:text-[46px]">
             {t("title")}
           </h1>

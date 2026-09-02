@@ -1,7 +1,9 @@
 import { cn } from "@/lib/cn";
 
-// Mono eyebrow / section label. Tones from the design file:
-// muted = section indices, accent = eyebrows on dark, royal = eyebrows on light.
+// Mono label for DATA ONLY: indices, reference codes, timestamps, prices.
+// NOT an eyebrow / section-label treatment — that's the Eyebrow component
+// (text font). Tones: muted = indices/meta, accent = data on dark, royal =
+// data on light.
 const toneClasses = {
   muted: "text-mono-label",
   accent: "text-accent-soft",

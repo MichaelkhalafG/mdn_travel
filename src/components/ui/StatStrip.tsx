@@ -1,7 +1,10 @@
 import { cn } from "@/lib/cn";
+import { ContourLayer } from "./ContourLayer";
 
 // Trust/USP strip per design: navy gradient section with a royal bloom at the
 // inline-end bottom corner (mirrors in RTL), mono figures, hairline cell gaps.
+// Contours flow from the inline-START corner here — alternating the origin
+// with the services band above so the page doesn't repeat mechanically.
 export function StatStrip({
   stats,
   className,
@@ -17,6 +20,7 @@ export function StatStrip({
       )}
     >
       <div aria-hidden className="bloom-stats pointer-events-none absolute inset-0" />
+      <ContourLayer origin="start" className="opacity-60" />
       <div className="relative mx-auto grid max-w-[1328px] grid-cols-2 gap-px bg-fg-on-dark/6 lg:grid-cols-4">
         {stats.map((stat) => (
           <div

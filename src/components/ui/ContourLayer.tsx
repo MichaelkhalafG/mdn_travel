@@ -35,20 +35,36 @@ const CONTOUR_PATHS = [90, 165, 245, 330, 420, 515].map((r, i) =>
   contourPath(640, -30, r, i + 1)
 );
 
-export function ContourLayer({ className }: { className?: string }) {
+export function ContourLayer({
+  origin = "end",
+  className,
+}: {
+  /** Corner the contours flow from — alternate per band so stacked sections
+      don't repeat mechanically. Both flip in RTL. */
+  origin?: "end" | "start";
+  className?: string;
+}) {
   return (
     <svg
       aria-hidden
       className={cn(
-        "contour-fade pointer-events-none absolute inset-0 size-full rtl:-scale-x-100",
+        "contour-fade pointer-events-none absolute inset-0 size-full",
+        origin === "start" ? "-scale-x-100 rtl:scale-x-100" : "rtl:-scale-x-100",
         className
       )}
       viewBox="0 0 600 460"
       preserveAspectRatio="xMidYMid slice"
     >
       <g fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1">
-        {CONTOUR_PATHS.map((d) => (
-          <path key={d.slice(0, 24)} d={d} vectorEffect="non-scaling-stroke" />
+        {CONTOUR_PATHS.map((d, i) => (
+          <path
+            key={d.slice(0, 24)}
+            d={d}
+            vectorEffect="non-scaling-stroke"
+            // mobile simplification: drop the two tightest rings so narrow
+            // crops read as a few large curves, not noise
+            className={i < 2 ? "max-md:hidden" : undefined}
+          />
         ))}
       </g>
     </svg>

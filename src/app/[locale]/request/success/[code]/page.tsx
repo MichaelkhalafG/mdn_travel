@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { ButtonLink, ContourLayer, MonoLabel, ReferenceCode } from "@/components/ui";
+import { ButtonLink, ContourLayer, Eyebrow, ReferenceCode } from "@/components/ui";
 import { CopyCodeButton } from "./CopyCodeButton";
 
 export async function generateMetadata({
@@ -60,9 +60,7 @@ export default async function SuccessPage({
             {t("body")}
           </p>
           <div className="mt-2 flex flex-col items-center gap-3.5">
-            <MonoLabel tone="accent" className="tracking-[0.2em]">
-              {t("refLabel")}
-            </MonoLabel>
+            <Eyebrow>{t("refLabel")}</Eyebrow>
             <div className="flex flex-col items-stretch gap-2.5 sm:flex-row">
               <ReferenceCode code={ticket.referenceCode} size="lg" />
               <CopyCodeButton code={ticket.referenceCode} />

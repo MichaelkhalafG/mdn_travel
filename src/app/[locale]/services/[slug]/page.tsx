@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { serviceSlugs } from "@/lib/services";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { ButtonLink, Card, MediaImage, MeridianLayer, MonoLabel } from "@/components/ui";
+import { ButtonLink, Card, Eyebrow, MediaImage, MeridianLayer } from "@/components/ui";
 
 // Shells for the 9 seeded slugs; name/desc stay editable data, so the page
 // always renders from the database at request time.
@@ -83,13 +83,13 @@ export default async function ServicePage({
         <div aria-hidden className="hero-scrim pointer-events-none absolute inset-0" />
         <div aria-hidden className="hero-text-scrim pointer-events-none absolute inset-0" />
         <div className="relative mx-auto flex min-h-[470px] max-w-[1440px] flex-col justify-end gap-5 px-5 pb-11 md:min-h-[560px] md:gap-6 md:px-14 md:pb-[72px]">
-          <p className="mono flex items-center gap-2.5 text-[11px] tracking-[0.16em] text-fg-on-dark/45">
-            <span>{t("eyebrow")}</span>
-            <span aria-hidden>/</span>
+          <p className="flex items-center gap-2.5">
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
+            <Eyebrow aria-hidden>/</Eyebrow>
             {/* dir=ltr: bidi isolation for the digits + Latin slug in RTL */}
-            <span dir="ltr" className="text-accent-soft">
+            <Eyebrow dir="ltr">
               {`${String(service.order).padStart(2, "0")} ${service.slug.toUpperCase()}`}
-            </span>
+            </Eyebrow>
           </p>
           <h1 className="max-w-[860px] text-[38px] leading-[1.35] font-light text-pretty text-fg-on-dark md:text-[62px]">
             {name}
@@ -105,9 +105,7 @@ export default async function ServicePage({
         <div className="mx-auto grid max-w-[1328px] grid-cols-1 items-start gap-10 lg:grid-cols-[1.25fr_1fr] lg:gap-20">
           <div className="flex flex-col gap-8 md:gap-11">
             <div className="flex flex-col gap-4 md:gap-5">
-              <MonoLabel tone="accent" className="tracking-[0.22em]">
-                {t("experienceEyebrow")}
-              </MonoLabel>
+              <Eyebrow>{t("experienceEyebrow")}</Eyebrow>
               <h2 className="text-[26px] leading-relaxed font-light text-fg-on-dark md:text-[34px] md:leading-[1.6]">
                 {t("experienceTitle")}
               </h2>
@@ -132,9 +130,7 @@ export default async function ServicePage({
 
           <Card variant="dark" className="lg:sticky lg:top-28">
             <div className="flex flex-col gap-6 p-7 md:p-11">
-              <MonoLabel tone="accent" className="tracking-[0.2em]">
-                {t("requestEyebrow")}
-              </MonoLabel>
+              <Eyebrow>{t("requestEyebrow")}</Eyebrow>
               <h2 className="text-[24px] leading-relaxed font-normal text-fg-on-dark md:text-[28px] md:leading-[1.6]">
                 {t("requestTitle")}
               </h2>

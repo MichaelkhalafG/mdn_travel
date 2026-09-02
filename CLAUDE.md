@@ -23,7 +23,8 @@ Users pick a service → open a request (ticket) → admin handles everything of
 - Fonts (next/font, self-hosted):
   - Latin/UI + English: **Space Grotesk** (headings tracking -0.03em)
   - Arabic: **IBM Plex Sans Arabic**
-  - Numbers, reference codes, prices: **IBM Plex Mono** with `tabular-nums` (class `.mono`) in BOTH locales
+  - **IBM Plex Mono** (`.mono` / `MonoLabel`) is for DATA ONLY: reference codes, numbers, prices, timestamps, indices, the hero pager — in BOTH locales. It is NOT an eyebrow/section-label treatment.
+  - Eyebrows / section labels use the `Eyebrow` component: TEXT font (Space Grotesk / Plex Arabic via the locale stack), uppercase, 12-13px, font-medium, letter-spacing 0.14em, white/55 on dark (`tone="light"` → fg-on-light-muted on light). No dash/hairline prefix, no accent color, never mono.
 - Font stacks switch per locale on `<body>`; Latin chars inside Arabic text fall back to Space Grotesk.
 - Admin dashboard is also bilingual (default en).
 
@@ -46,7 +47,7 @@ Dark-first product. Deep navy is the canvas; white is text; royal blue is rare a
 --border-light: #d5d8dc;
 --border-on-dark: rgba(255,255,255,0.06);
 --radius: 6px;              /* EVERYWHERE. Uniform. No other radii. */
---mono-label: #8a94a3;          /* mono section labels + muted meta, both surfaces */
+--mono-label: #8a94a3;          /* mono DATA labels (indices, meta) — not eyebrows */
 --fg-on-light-muted: #57606a;   /* muted text on light surfaces */
 --border-light-subtle: #eaeef2; /* table row hairlines on light surfaces */
 /* neutral grays extracted from the design file — allowed. The "no extra colors"
@@ -58,6 +59,7 @@ Dark-first product. Deep navy is the canvas; white is text; royal blue is rare a
   - HERO-TIER = `MeridianLayer` (src/components/ui): three great-circle arc hairlines (1px, accent-soft→royal gradient strokes, non-scaling, circle radii larger than the panel) + one small pulsing royal "destination" dot near the bright arc's apex. Exactly ONE instance per view, only on: the landing hero, service detail heroes, the footer panel, and og.jpg.
   - SURFACE-TIER = `ContourLayer` (src/components/ui): six concentric irregular contour lines (nautical-chart fragment) from the inline-end top corner, 1px white @15%, CSS-masked fade toward the content side. Default on DarkPanel and dark Cards; also the mobile drawer and any repeated dark surface.
   - Both mirror in RTL via `rtl:-scale-x-100`; the dot pulse (`.pulse-dot`) collapses under prefers-reduced-motion. Tuning reference: `/[locale]/dev/texture`.
+  - WHITESPACE: large dark gaps between sections must not render flat navy. Fill them with quiet life: ContourLayer bands at reduced opacity (`opacity-60/70`) positioned through empty zones, alternating `origin="end"/"start"` per band down the page; `.bloom-seam-top/bottom` (~10% royal) near section boundaries. Exception: the landing how-it-works section carries ONE `MeridianLayer variant="route"` arc (no dot, accent-toned) behind the step row — the only mid-page meridian. Textures never sit behind text blocks (mask/fade before reaching them); at mobile widths ContourLayer drops its two tightest rings automatically.
 - Shadows: large soft navy-tinted on marketing surfaces (e.g. `0 40px 90px -30px rgba(2,29,46,0.9)`); flat/near-zero in admin UI (Primer-style).
 - Borders: 1px hairlines always.
 - Logo lockup: "MDN" (Space Grotesk 700) + 1px vertical hairline + "TRAVEL" (Space Grotesk 600, letter-spacing 0.26em, lavender on dark).

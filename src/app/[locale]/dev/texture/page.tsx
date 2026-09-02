@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   Button,
   DarkPanel,
+  Eyebrow,
   MeridianLayer,
   MonoLabel,
 } from "@/components/ui";
@@ -23,9 +24,7 @@ export default async function TexturePage({
 
   const panelContent = (
     <div className="relative flex min-h-[460px] flex-col justify-center gap-6 p-10">
-      <MonoLabel tone="accent" className="tracking-[0.2em]">
-        {t("panelEyebrow")}
-      </MonoLabel>
+      <Eyebrow>{t("panelEyebrow")}</Eyebrow>
       <h2 className="text-[30px] leading-snug font-light text-fg-on-dark">
         {tUi("panelTitle")}
       </h2>

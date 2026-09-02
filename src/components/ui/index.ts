@@ -1,5 +1,6 @@
 export { Button, ButtonLink } from "./Button";
 export { MonoLabel } from "./MonoLabel";
+export { Eyebrow } from "./Eyebrow";
 export { MediaImage } from "./MediaImage";
 export { HeroRotator } from "./HeroRotator";
 export { ServiceCard } from "./ServiceCard";

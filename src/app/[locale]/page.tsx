@@ -4,6 +4,8 @@ import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import {
   ButtonLink,
+  ContourLayer,
+  Eyebrow,
   HeroRotator,
   MeridianLayer,
   MonoLabel,
@@ -75,11 +77,8 @@ export default async function HomePage({
         <div aria-hidden className="hero-scrim pointer-events-none absolute inset-0" />
         <div aria-hidden className="hero-text-scrim pointer-events-none absolute inset-0" />
         <div className="relative mx-auto flex min-h-[calc(100svh-3.5rem)] max-w-[1440px] flex-col justify-end gap-6 px-5 pb-[calc(4rem_+_env(safe-area-inset-bottom))] md:min-h-[720px] md:justify-center md:gap-8 md:px-14 md:pb-0">
-          <p className="hero-rise flex items-center gap-3">
-            <span aria-hidden className="h-px w-7 bg-accent-soft max-md:hidden" />
-            <MonoLabel tone="accent" className="text-xs tracking-[0.24em]">
-              {t("eyebrow")}
-            </MonoLabel>
+          <p className="hero-rise">
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
           </p>
           <h1 className="hero-rise max-w-[900px] text-[38px] leading-[1.35] font-light text-pretty text-fg-on-dark [animation-delay:90ms] md:text-[76px] md:leading-[1.3]">
             {t("heroTitleLine1")} <br className="max-md:hidden" />
@@ -104,17 +103,22 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Services grid — all 9 from the database, ordered */}
+      {/* Services grid — all 9 from the database, ordered. Contours fill the
+          gaps below the header (cards are opaque, so curves live in the
+          crevices and the bottom band); a seam bloom breathes at the
+          boundary to the light section. */}
       <section
         id="services"
-        className="bg-linear-to-b from-navy-deep to-navy px-5 py-11 md:px-14 md:py-[120px]"
+        className="relative overflow-hidden bg-linear-to-b from-navy-deep to-navy px-5 py-11 md:px-14 md:py-[120px]"
       >
-        <div className="mx-auto flex max-w-[1328px] flex-col gap-6 md:gap-14">
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-[190px] bottom-0 md:top-[300px]">
+          <ContourLayer className="opacity-70" />
+        </div>
+        <div aria-hidden className="bloom-seam-bottom pointer-events-none absolute inset-0" />
+        <div className="relative mx-auto flex max-w-[1328px] flex-col gap-6 md:gap-14">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-12">
             <div className="flex flex-col gap-4 md:max-w-[640px]">
-              <MonoLabel tone="accent" className="tracking-[0.22em]">
-                {t("servicesEyebrow")}
-              </MonoLabel>
+              <Eyebrow>{t("servicesEyebrow")}</Eyebrow>
               <h2 className="text-[28px] leading-normal font-light text-fg-on-dark md:text-[46px]">
                 {t("servicesTitle")}
               </h2>
@@ -137,13 +141,14 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* How it works — light section, 3 steps */}
-      <section className="bg-canvas-light px-5 py-10 md:px-14 md:py-[120px]">
-        <div className="mx-auto flex max-w-[1328px] flex-col gap-5 md:gap-16">
+      {/* How it works — light section, 3 steps. A single route arc (no dot)
+          passes behind the step row like a journey line — the one mid-page
+          meridian instance. */}
+      <section className="relative overflow-hidden bg-canvas-light px-5 py-10 md:px-14 md:py-[120px]">
+        <MeridianLayer variant="route" />
+        <div className="relative mx-auto flex max-w-[1328px] flex-col gap-5 md:gap-16">
           <div className="flex flex-col gap-4 md:items-center md:text-center">
-            <MonoLabel tone="royal" className="tracking-[0.22em]">
-              {t("howEyebrow")}
-            </MonoLabel>
+            <Eyebrow tone="light">{t("howEyebrow")}</Eyebrow>
             <h2 className="text-[26px] leading-normal font-light text-navy md:text-[44px]">
               {t("howTitle")}
             </h2>

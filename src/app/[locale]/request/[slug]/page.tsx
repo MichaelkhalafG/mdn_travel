@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { serviceSlugs } from "@/lib/services";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { Card, Chip, ContourLayer, MonoLabel } from "@/components/ui";
+import { Card, Chip, ContourLayer, Eyebrow } from "@/components/ui";
 import { RequestForm } from "./RequestForm";
 
 export const revalidate = 0;
@@ -48,9 +48,7 @@ export default async function RequestPage({
         <ContourLayer />
         <div className="relative mx-auto grid max-w-[1328px] grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.3fr] lg:gap-[72px]">
           <div className="flex flex-col gap-6 lg:pt-3">
-            <MonoLabel tone="accent" className="tracking-[0.22em]">
-              {t("eyebrow")}
-            </MonoLabel>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h1 className="text-[32px] leading-[1.45] font-light text-fg-on-dark md:text-[46px]">
               {t("pageTitleLine1")}
               <br />

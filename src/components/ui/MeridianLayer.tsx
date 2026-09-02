@@ -11,12 +11,47 @@ import { cn } from "@/lib/cn";
 // the references resolve to the first instance's identical defs.
 export function MeridianLayer({
   align = "center",
+  variant = "full",
   className,
 }: {
   /** "top" keeps the arc apex + dot in view on short, wide panels (footer) */
   align?: "center" | "top";
+  /** "route": ONE mid-height arc, no destination dot, accent-toned for light
+      surfaces — the landing how-it-works journey line. */
+  variant?: "full" | "route";
   className?: string;
 }) {
+  if (variant === "route") {
+    return (
+      <svg
+        aria-hidden
+        className={cn(
+          "pointer-events-none absolute inset-0 size-full rtl:-scale-x-100",
+          className
+        )}
+        viewBox="0 0 600 460"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <defs>
+          <linearGradient id="mdn-arc-route" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="#010ed0" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#010ed0" stopOpacity="0.3" />
+            <stop offset="1" stopColor="#010ed0" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        <circle
+          cx="300"
+          cy="1600"
+          r="1370"
+          fill="none"
+          stroke="url(#mdn-arc-route)"
+          strokeWidth="1.2"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+    );
+  }
+
   return (
     <svg
       aria-hidden

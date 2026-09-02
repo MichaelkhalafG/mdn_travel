@@ -22,7 +22,7 @@
   --radius: 6px;              /* EVERYWHERE. Uniform. No other radii. */
 
   /* Neutral shades from the design file (design/template.html, 01 — DESIGN SYSTEM) */
-  --mono-label: #8a94a3;          /* mono section labels + muted meta, both surfaces */
+  --mono-label: #8a94a3;          /* mono DATA labels (indices, meta) — not eyebrows */
   --fg-on-light-muted: #57606a;   /* muted text on light surfaces */
   --border-light-subtle: #eaeef2; /* table row hairlines on light surfaces */
 
@@ -200,6 +200,40 @@ html[lang="ar"] :is(h1, h2, h3, h4) {
     rgba(2, 29, 46, 0.6) 0%,
     rgba(2, 29, 46, 0.3) 45%,
     rgba(2, 29, 46, 0) 72%
+  );
+}
+
+/* Section-seam blooms (~10%): quiet royal breaths near section boundaries so
+   the page breathes between content blocks. Off-center, so they mirror. */
+.bloom-seam-top {
+  background: radial-gradient(
+    45% 55% at 78% 0%,
+    rgba(1, 14, 208, 0.11) 0%,
+    rgba(2, 29, 46, 0) 60%
+  );
+}
+
+[dir="rtl"] .bloom-seam-top {
+  background: radial-gradient(
+    45% 55% at 22% 0%,
+    rgba(1, 14, 208, 0.11) 0%,
+    rgba(2, 29, 46, 0) 60%
+  );
+}
+
+.bloom-seam-bottom {
+  background: radial-gradient(
+    45% 55% at 22% 100%,
+    rgba(1, 14, 208, 0.11) 0%,
+    rgba(2, 29, 46, 0) 60%
+  );
+}
+
+[dir="rtl"] .bloom-seam-bottom {
+  background: radial-gradient(
+    45% 55% at 78% 100%,
+    rgba(1, 14, 208, 0.11) 0%,
+    rgba(2, 29, 46, 0) 60%
   );
 }
 
