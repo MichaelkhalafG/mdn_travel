@@ -62,7 +62,10 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-3 border-t border-border-on-dark pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <span className="mono text-xs text-fg-on-dark/35">{t("copyright")}</span>
+          {/* dir=ltr: bidi isolation so "© 2026 MDN GROUP" doesn't reorder in RTL */}
+          <span dir="ltr" className="mono text-xs text-fg-on-dark/35">
+            {t("copyright")}
+          </span>
           <span className="text-[13px] text-fg-on-dark/35">{t("rights")}</span>
         </div>
       </div>

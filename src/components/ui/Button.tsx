@@ -2,7 +2,7 @@ import type { ComponentProps } from "react";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/cn";
 
-type ButtonVariant = "primary" | "lavender" | "ghost" | "accent" | "danger";
+type ButtonVariant = "primary" | "lavender" | "ghost" | "accent" | "danger" | "navy";
 type ButtonSize = "lg" | "md" | "sm";
 
 // Per design/template.html "BUTTONS ON DARK": white/lavender fills carry
@@ -14,6 +14,9 @@ const variantClasses: Record<ButtonVariant, string> = {
   ghost: "border border-fg-on-dark/22 bg-transparent text-fg-on-dark font-medium",
   accent: "bg-accent text-fg-on-dark font-semibold glow-accent",
   danger: "border border-danger/35 bg-transparent text-danger font-normal",
+  // Solid navy fill for LIGHT surfaces (form cards, admin) — the design's
+  // submit button; the white `primary` fill would vanish on white.
+  navy: "bg-navy text-fg-on-dark font-semibold",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {

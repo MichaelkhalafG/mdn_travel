@@ -1,7 +1,10 @@
 {
   "metadata": {
     "title": "MDN Travel — خدمات سفر فاخرة وطلبات حجز",
-    "description": "اختر الخدمة، افتح طلبًا، وفريقنا يتولى كل شيء عنك."
+    "description": "اختر الخدمة، افتح طلبًا، وفريقنا يتولى كل شيء عنك.",
+    "serviceTitle": "{name} — MDN Travel",
+    "requestTitle": "افتح طلبًا — MDN Travel",
+    "successTitle": "وصل الطلب — MDN Travel"
   },
   "brand": {
     "name": "MDN",
@@ -59,15 +62,69 @@
     "PHONE": "هاتف",
     "EMAIL": "بريد إلكتروني"
   },
+  "service": {
+    "eyebrow": "SERVICES",
+    "experienceEyebrow": "THE EXPERIENCE",
+    "experienceTitle": "أنت تختار المزاج فقط — ونحن نرتّب كل شيء حوله.",
+    "experienceBody": "نبدأ بمحادثة قصيرة لفهم ما تريده، ثم نعود إليك بعرض واحد واضح — مُنتقى بعناية، ومُرتّب بالكامل، ويتابعه الكونسيرج معك من أول اتصال حتى آخر تفصيل.",
+    "feature1Title": "كونسيرج مخصّص",
+    "feature1Desc": "شخص واحد يتابع طلبك من البداية حتى النهاية",
+    "feature2Title": "عرض واحد واضح",
+    "feature2Desc": "دون خيارات زائدة ولا مقارنات مربكة — اقتراح واحد على مقاسك",
+    "feature3Title": "ترتيب كامل",
+    "feature3Desc": "الحجوزات والتنقلات والتفاصيل، كلها علينا",
+    "feature4Title": "معك حتى النهاية",
+    "feature4Desc": "نبقى قريبين حتى انتهاء الخدمة بالكامل",
+    "requestEyebrow": "REQUEST",
+    "requestTitle": "اطلب هذه الخدمة",
+    "requestBody": "أرسل التفاصيل ويعود إليك فريق الكونسيرج خلال ٦ ساعات كحدّ أقصى.",
+    "rowResponse": "زمن الرد",
+    "rowResponseValue": "6h",
+    "rowPayment": "الدفع الآن",
+    "rowPaymentValue": "لا شيء",
+    "rowTracking": "التتبع",
+    "rowTrackingValue": "كود مرجعي",
+    "requestCta": "اطلب هذه الخدمة",
+    "noPaymentNote": "بدون دفع الآن — الطلب مجاني تمامًا"
+  },
   "request": {
     "title": "افتح طلبًا",
+    "eyebrow": "NEW REQUEST",
+    "pageTitleLine1": "احكيلنا طلبك",
+    "pageTitleLine2": "ونتولّى الباقي",
+    "pageLead": "لا حجوزات فورية ولا دفع الآن. نقرأ طلبك بأنفسنا ونعود إليك بعرض واحد مُفصّل.",
+    "bullet1": "رد خلال ٦ ساعات",
+    "bullet2": "كود مرجعي لتتبع الطلب",
+    "bullet3": "بياناتك لا تُشارك مع أي طرف",
+    "formTitle": "نموذج الطلب",
     "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "اسمك الكامل",
     "phone": "رقم الهاتف",
+    "phonePlaceholder": "+20 100 000 0000",
     "email": "البريد الإلكتروني (اختياري)",
+    "emailPlaceholder": "name@example.com",
     "contactMethod": "طريقة التواصل المفضلة",
     "details": "أخبرنا بما تحتاجه",
+    "detailsPlaceholder": "التواريخ، عدد الضيوف، المدينة، وأي تفاصيل تحب أن نعرفها…",
+    "privacyNote": "بإرسال الطلب أنت توافق على سياسة الخصوصية.",
     "submit": "إرسال الطلب",
-    "submitting": "جارٍ الإرسال…"
+    "submitting": "جارٍ الإرسال…",
+    "submitError": "حدث خطأ ما — يرجى المحاولة مرة أخرى."
+  },
+  "success": {
+    "title": "وصلنا طلبك بأمان",
+    "body": "فريق الكونسيرج يراجع التفاصيل الآن وسيتواصل معك خلال ٦ ساعات. احتفظ بالكود المرجعي لمتابعة حالة الطلب.",
+    "refLabel": "REFERENCE CODE",
+    "copy": "نسخ الكود",
+    "copied": "تم النسخ",
+    "trackCta": "تتبع الطلب",
+    "backHome": "العودة للرئيسية"
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "الصفحة غير موجودة",
+    "body": "الصفحة التي تبحث عنها غير موجودة أو لم تعد متاحة.",
+    "backHome": "العودة للرئيسية"
   },
   "track": {
     "title": "تتبّع طلبك",

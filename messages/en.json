@@ -1,7 +1,10 @@
 {
   "metadata": {
     "title": "MDN Travel — Luxury Concierge & Booking Requests",
-    "description": "Pick a service, open a request, and our team handles everything for you."
+    "description": "Pick a service, open a request, and our team handles everything for you.",
+    "serviceTitle": "{name} — MDN Travel",
+    "requestTitle": "Open a request — MDN Travel",
+    "successTitle": "Request received — MDN Travel"
   },
   "brand": {
     "name": "MDN",
@@ -59,15 +62,69 @@
     "PHONE": "Phone",
     "EMAIL": "Email"
   },
+  "service": {
+    "eyebrow": "SERVICES",
+    "experienceEyebrow": "THE EXPERIENCE",
+    "experienceTitle": "You choose the mood — we arrange everything around it.",
+    "experienceBody": "It starts with a short conversation about what you have in mind. Then we come back with one clear offer — hand-picked, fully arranged, and followed by your concierge from the first call to the last detail.",
+    "feature1Title": "A dedicated concierge",
+    "feature1Desc": "One person follows your request from start to finish",
+    "feature2Title": "One clear offer",
+    "feature2Desc": "No endless options — a single tailored proposal",
+    "feature3Title": "Arranged end to end",
+    "feature3Desc": "Bookings, transfers, and details handled for you",
+    "feature4Title": "With you throughout",
+    "feature4Desc": "We stay close until the service is complete",
+    "requestEyebrow": "REQUEST",
+    "requestTitle": "Request this service",
+    "requestBody": "Send us the details and the concierge team comes back to you within 6 hours at most.",
+    "rowResponse": "Response time",
+    "rowResponseValue": "6h",
+    "rowPayment": "Payment now",
+    "rowPaymentValue": "None",
+    "rowTracking": "Tracking",
+    "rowTrackingValue": "Reference code",
+    "requestCta": "Request this service",
+    "noPaymentNote": "No payment now — requesting is completely free"
+  },
   "request": {
     "title": "Open a request",
+    "eyebrow": "NEW REQUEST",
+    "pageTitleLine1": "Tell us your request,",
+    "pageTitleLine2": "we handle the rest",
+    "pageLead": "No instant bookings and no payment now. We read your request ourselves and come back with one detailed offer.",
+    "bullet1": "A reply within 6 hours",
+    "bullet2": "A reference code to track your request",
+    "bullet3": "Your details are never shared",
+    "formTitle": "Request form",
     "fullName": "Full name",
+    "fullNamePlaceholder": "Your full name",
     "phone": "Phone number",
+    "phonePlaceholder": "+20 100 000 0000",
     "email": "Email (optional)",
+    "emailPlaceholder": "name@example.com",
     "contactMethod": "Preferred contact method",
     "details": "Tell us what you need",
+    "detailsPlaceholder": "Dates, number of guests, city, and anything you'd like us to know…",
+    "privacyNote": "By sending this request you agree to our privacy policy.",
     "submit": "Send request",
-    "submitting": "Sending…"
+    "submitting": "Sending…",
+    "submitError": "Something went wrong — please try again."
+  },
+  "success": {
+    "title": "Your request arrived safely",
+    "body": "The concierge team is reviewing the details now and will contact you within 6 hours. Keep the reference code to follow your request.",
+    "refLabel": "REFERENCE CODE",
+    "copy": "Copy code",
+    "copied": "Copied",
+    "trackCta": "Track request",
+    "backHome": "Back to home"
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist or is no longer available.",
+    "backHome": "Back to home"
   },
   "track": {
     "title": "Track your request",

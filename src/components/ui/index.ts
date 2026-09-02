@@ -7,6 +7,7 @@ export { StatStrip } from "./StatStrip";
 export { Input } from "./Input";
 export { Textarea } from "./Textarea";
 export { Select } from "./Select";
+export { RadioPills } from "./RadioPills";
 export { Card } from "./Card";
 export { DarkPanel } from "./DarkPanel";
 export { Chip, ReferenceCode } from "./Chip";

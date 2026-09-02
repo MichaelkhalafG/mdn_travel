@@ -6,18 +6,24 @@ export function FieldWrapper({
   label,
   htmlFor,
   error,
+  labelEnd,
   children,
 }: {
   label: string;
   htmlFor: string;
   error?: string;
+  /** Trailing element on the label row (e.g. the textarea character counter) */
+  labelEnd?: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={htmlFor} className="text-[13px] text-fg-on-light-muted">
-        {label}
-      </label>
+      <span className="flex items-center justify-between gap-4">
+        <label htmlFor={htmlFor} className="text-[13px] text-fg-on-light-muted">
+          {label}
+        </label>
+        {labelEnd}
+      </span>
       {children}
       {error ? <p className="text-[13px] text-danger">{error}</p> : null}
     </div>

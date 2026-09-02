@@ -188,6 +188,15 @@ html[lang="ar"] :is(h1, h2, h3, h4) {
   );
 }
 
+/* Centered top bloom (05 — SUCCESS). Symmetric, so no RTL mirror needed. */
+.bloom-top {
+  background: radial-gradient(
+    60% 80% at 50% 0%,
+    rgba(1, 14, 208, 0.45) 0%,
+    rgba(2, 29, 46, 0) 62%
+  );
+}
+
 .bloom-stats {
   background: radial-gradient(
     70% 120% at 85% 100%,
