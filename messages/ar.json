@@ -4,6 +4,7 @@
     "description": "اختر الخدمة، افتح طلبًا، وفريقنا يتولى كل شيء عنك.",
     "serviceTitle": "{name} — MDN Travel",
     "requestTitle": "افتح طلبًا — MDN Travel",
+    "trackTitle": "تتبع طلبك — MDN Travel",
     "successTitle": "وصل الطلب — MDN Travel"
   },
   "brand": {
@@ -128,10 +129,27 @@
   },
   "track": {
     "title": "تتبّع طلبك",
-    "referenceCode": "رقم المرجع",
+    "eyebrow": "TRACK YOUR REQUEST",
+    "lead": "أدخل الكود المرجعي ورقم الهاتف الذي استخدمته في الطلب.",
+    "referenceCode": "الكود المرجعي",
+    "codePlaceholder": "MDN-8F3K2",
     "phone": "رقم الهاتف",
-    "submit": "تتبّع",
-    "notFound": "لم نعثر على طلب مطابق لهذا الرقم ورقم الهاتف."
+    "phonePlaceholder": "+20 100 000 0000",
+    "submit": "عرض حالة الطلب",
+    "checking": "جارٍ التحقق…",
+    "invalidCode": "أدخل كودًا مرجعيًا صحيحًا (MDN-XXXXX).",
+    "notFound": "لم نعثر على طلب مطابق لهذا الكود ورقم الهاتف.",
+    "notFoundTitle": "لا يوجد طلب مطابق",
+    "notFoundHint": "تأكد من الكود المرجعي، ومن أن رقم الهاتف هو نفسه الذي استخدمته عند إرسال الطلب.",
+    "requestNew": "اطلب خدمة جديدة",
+    "rateLimitedTitle": "محاولات كثيرة",
+    "rateLimited": "محاولات كثيرة — يرجى المحاولة مرة أخرى بعد دقائق.",
+    "emptyTitle": "حالة طلبك تظهر هنا",
+    "emptyBody": "أدخل الكود المرجعي ورقم هاتفك لعرض سجل الحالة كاملًا.",
+    "currentStep": "الخطوة الحالية",
+    "orNoAgreement": "أو: لم يتم الاتفاق",
+    "helpText": "تحتاج تعديل الطلب؟ راسل الكونسيرج مباشرة.",
+    "helpCta": "تواصل معنا"
   },
   "admin": {
     "login": {

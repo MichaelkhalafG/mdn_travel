@@ -7,6 +7,8 @@ export type TimelineStep = {
   /** Plain-text note, e.g. "current step — preparing your offer" */
   note?: string;
   state: "completed" | "current" | "future";
+  /** "danger" = terminal NO_AGREEMENT: red dot + label, no glow */
+  tone?: "danger";
 };
 
 // Vertical status timeline per design/template.html (tracking + admin history):
@@ -34,7 +36,8 @@ export function Timeline({
                   "rounded-full",
                   dark ? "size-3" : "size-2.5",
                   step.state === "completed" && "bg-accent",
-                  step.state === "current" && "glow-accent bg-accent",
+                  step.state === "current" &&
+                    (step.tone === "danger" ? "bg-danger" : "glow-accent bg-accent"),
                   step.state === "future" &&
                     (dark
                       ? "border border-fg-on-dark/28"
@@ -62,7 +65,11 @@ export function Timeline({
                   step.state === "completed" &&
                     (dark ? "text-fg-on-dark" : "text-navy"),
                   step.state === "current" &&
-                    (dark ? "font-medium text-lavender" : "font-medium text-navy"),
+                    (step.tone === "danger"
+                      ? "font-medium text-danger"
+                      : dark
+                        ? "font-medium text-lavender"
+                        : "font-medium text-navy"),
                   step.state === "future" &&
                     (dark ? "text-fg-on-dark/40" : "text-mono-label")
                 )}
@@ -70,9 +77,12 @@ export function Timeline({
                 {step.label}
               </span>
               {step.meta ? (
+                // dir=ltr: bidi isolation so "2026-09-02 · 15:00" keeps its
+                // order in RTL (mono data span exception)
                 <span
+                  dir="ltr"
                   className={cn(
-                    "mono text-xs",
+                    "mono self-start text-xs",
                     dark ? "text-fg-on-dark/40" : "text-mono-label"
                   )}
                 >

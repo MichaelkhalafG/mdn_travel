@@ -2,12 +2,13 @@
 
 import { useId, type ComponentProps } from "react";
 import { cn } from "@/lib/cn";
-import { FieldWrapper, fieldClasses } from "./Field";
+import { FieldWrapper, fieldClasses, type FieldSurface } from "./Field";
 
 export function Input({
   label,
   error,
   mono,
+  surface = "light",
   className,
   id,
   ...props
@@ -16,15 +17,16 @@ export function Input({
   error?: string;
   /** Phone numbers / codes render in IBM Plex Mono with tabular figures */
   mono?: boolean;
+  surface?: FieldSurface;
 }) {
   const autoId = useId();
   const inputId = id ?? autoId;
   return (
-    <FieldWrapper label={label} htmlFor={inputId} error={error}>
+    <FieldWrapper label={label} htmlFor={inputId} error={error} surface={surface}>
       <input
         id={inputId}
         aria-invalid={error ? true : undefined}
-        className={cn(fieldClasses(error), mono && "mono", className)}
+        className={cn(fieldClasses(error, surface), mono && "mono", className)}
         {...props}
       />
     </FieldWrapper>

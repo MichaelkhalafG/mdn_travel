@@ -38,7 +38,7 @@ export function Textarea({
         id={textareaId}
         rows={rows}
         aria-invalid={error ? true : undefined}
-        className={cn(fieldClasses(error), "resize-y", className)}
+        className={cn(fieldClasses(error, "light", "resize-y"), className)}
         {...props}
       />
     </FieldWrapper>

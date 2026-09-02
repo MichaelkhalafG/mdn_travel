@@ -4,6 +4,7 @@
     "description": "Pick a service, open a request, and our team handles everything for you.",
     "serviceTitle": "{name} — MDN Travel",
     "requestTitle": "Open a request — MDN Travel",
+    "trackTitle": "Track your request — MDN Travel",
     "successTitle": "Request received — MDN Travel"
   },
   "brand": {
@@ -128,10 +129,27 @@
   },
   "track": {
     "title": "Track your request",
+    "eyebrow": "TRACK YOUR REQUEST",
+    "lead": "Enter the reference code and the phone number you used in the request.",
     "referenceCode": "Reference code",
+    "codePlaceholder": "MDN-8F3K2",
     "phone": "Phone number",
-    "submit": "Track",
-    "notFound": "We couldn't find a request matching that code and phone number."
+    "phonePlaceholder": "+20 100 000 0000",
+    "submit": "View request status",
+    "checking": "Checking…",
+    "invalidCode": "Enter a valid reference code (MDN-XXXXX).",
+    "notFound": "We couldn't find a request matching that code and phone number.",
+    "notFoundTitle": "No matching request",
+    "notFoundHint": "Check the reference code, and make sure the phone number is the one you used when you sent the request.",
+    "requestNew": "Request a new service",
+    "rateLimitedTitle": "Too many attempts",
+    "rateLimited": "Too many attempts — please try again in a few minutes.",
+    "emptyTitle": "Your request status appears here",
+    "emptyBody": "Enter your reference code and phone number to see the full status timeline.",
+    "currentStep": "Current step",
+    "orNoAgreement": "or: no agreement",
+    "helpText": "Need to change your request? Message the concierge directly.",
+    "helpCta": "Contact us"
   },
   "admin": {
     "login": {

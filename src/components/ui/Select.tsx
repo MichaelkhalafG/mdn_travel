@@ -23,7 +23,7 @@ export function Select({
         <select
           id={selectId}
           aria-invalid={error ? true : undefined}
-          className={cn(fieldClasses(error, "w-full appearance-none pe-10"), className)}
+          className={cn(fieldClasses(error, "light", "w-full appearance-none pe-10"), className)}
           {...props}
         >
           {children}
