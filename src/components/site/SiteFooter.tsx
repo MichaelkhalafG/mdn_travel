@@ -13,7 +13,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-[1328px] flex-col gap-12 md:gap-16">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-12">
           <div className="flex flex-col gap-5">
-            <LogoLockup size="sm" />
+            <LogoLockup size="md" />
             <p className="max-w-[300px] text-sm leading-loose text-fg-on-dark/50">
               {t("tagline")}
             </p>

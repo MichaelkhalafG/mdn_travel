@@ -16,7 +16,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       href={pathname}
       locale={otherLocale}
       className={cn(
-        "font-sans text-[13px] tracking-[0.08em] text-fg-on-dark/50 transition-colors hover:text-fg-on-dark",
+        "mono rounded-brand text-[13px] tracking-[0.08em] text-fg-on-dark/50 outline-none transition-colors hover:text-fg-on-dark focus-visible:ring-[3px] focus-visible:ring-accent/40",
         className
       )}
     >
