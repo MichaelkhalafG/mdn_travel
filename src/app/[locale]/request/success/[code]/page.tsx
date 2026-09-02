@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { ButtonLink, MonoLabel, ReferenceCode } from "@/components/ui";
+import { ButtonLink, ContourLayer, MonoLabel, ReferenceCode } from "@/components/ui";
 import { CopyCodeButton } from "./CopyCodeButton";
 
 export async function generateMetadata({
@@ -45,7 +45,7 @@ export default async function SuccessPage({
       {/* 05 — SUCCESS: centered confirmation under a top bloom */}
       <section className="relative flex min-h-[calc(100svh-3.5rem)] items-center justify-center overflow-hidden bg-linear-to-b from-navy-deep to-navy px-5 py-16 md:min-h-[720px] md:px-10">
         <div aria-hidden className="bloom-top pointer-events-none absolute inset-0" />
-        <div aria-hidden className="grid-motif-lg pointer-events-none absolute inset-0" />
+        <ContourLayer />
         <div className="relative flex max-w-[720px] flex-col items-center gap-6 text-center md:gap-8">
           <span
             aria-hidden

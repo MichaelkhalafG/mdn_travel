@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { serviceSlugs } from "@/lib/services";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { ButtonLink, Card, MediaImage, MonoLabel } from "@/components/ui";
+import { ButtonLink, Card, MediaImage, MeridianLayer, MonoLabel } from "@/components/ui";
 
 // Shells for the 9 seeded slugs; name/desc stay editable data, so the page
 // always renders from the database at request time.
@@ -79,7 +79,7 @@ export default async function ServicePage({
           />
         </div>
         <div aria-hidden className="bloom-hero pointer-events-none absolute inset-0" />
-        <div aria-hidden className="grid-motif-lg pointer-events-none absolute inset-0" />
+        <MeridianLayer />
         <div aria-hidden className="hero-scrim pointer-events-none absolute inset-0" />
         <div aria-hidden className="hero-text-scrim pointer-events-none absolute inset-0" />
         <div className="relative mx-auto flex min-h-[470px] max-w-[1440px] flex-col justify-end gap-5 px-5 pb-11 md:min-h-[560px] md:gap-6 md:px-14 md:pb-[72px]">

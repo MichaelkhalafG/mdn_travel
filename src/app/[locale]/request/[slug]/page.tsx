@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { serviceSlugs } from "@/lib/services";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { Card, Chip, MonoLabel } from "@/components/ui";
+import { Card, Chip, ContourLayer, MonoLabel } from "@/components/ui";
 import { RequestForm } from "./RequestForm";
 
 export const revalidate = 0;
@@ -45,7 +45,7 @@ export default async function RequestPage({
       {/* 04 — REQUEST FORM: dark panel, pitch column + white form card */}
       <section className="relative overflow-hidden bg-linear-to-b from-navy-deep to-navy px-5 py-12 md:px-14 md:py-24">
         <div aria-hidden className="bloom-hero pointer-events-none absolute inset-0" />
-        <div aria-hidden className="grid-motif-lg pointer-events-none absolute inset-0" />
+        <ContourLayer />
         <div className="relative mx-auto grid max-w-[1328px] grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.3fr] lg:gap-[72px]">
           <div className="flex flex-col gap-6 lg:pt-3">
             <MonoLabel tone="accent" className="tracking-[0.22em]">

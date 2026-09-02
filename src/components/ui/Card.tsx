@@ -1,6 +1,7 @@
 import { cn } from "@/lib/cn";
+import { ContourLayer } from "./ContourLayer";
 
-// Dark variant: gradient panel + faint grid motif + soft navy marketing shadow.
+// Dark variant: gradient panel + surface-tier contours + soft navy marketing shadow.
 // Light variant: flat Primer-style surface for the admin UI (no heavy shadow).
 export function Card({
   variant = "dark",
@@ -25,7 +26,7 @@ export function Card({
   }
   return (
     <div className={cn("panel-dark shadow-marketing relative overflow-hidden", className)}>
-      <div aria-hidden className="grid-motif pointer-events-none absolute inset-0" />
+      <ContourLayer />
       <div className="relative">{children}</div>
     </div>
   );

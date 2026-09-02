@@ -10,6 +10,8 @@ export { Select } from "./Select";
 export { RadioPills } from "./RadioPills";
 export { Card } from "./Card";
 export { DarkPanel } from "./DarkPanel";
+export { MeridianLayer } from "./MeridianLayer";
+export { ContourLayer } from "./ContourLayer";
 export { Chip, ReferenceCode } from "./Chip";
 export { StatusBadge } from "./StatusBadge";
 export { Timeline, type TimelineStep } from "./Timeline";

@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import {
   ButtonLink,
   HeroRotator,
+  MeridianLayer,
   MonoLabel,
   ServiceCard,
   StatStrip,
@@ -70,7 +71,7 @@ export default async function HomePage({
           className="absolute inset-0"
         />
         <div aria-hidden className="bloom-hero pointer-events-none absolute inset-0" />
-        <div aria-hidden className="grid-motif-lg pointer-events-none absolute inset-0" />
+        <MeridianLayer />
         <div aria-hidden className="hero-scrim pointer-events-none absolute inset-0" />
         <div aria-hidden className="hero-text-scrim pointer-events-none absolute inset-0" />
         <div className="relative mx-auto flex min-h-[calc(100svh-3.5rem)] max-w-[1440px] flex-col justify-end gap-6 px-5 pb-[calc(4rem_+_env(safe-area-inset-bottom))] md:min-h-[720px] md:justify-center md:gap-8 md:px-14 md:pb-0">

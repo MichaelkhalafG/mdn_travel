@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
-import { ButtonLink, LogoLockup } from "@/components/ui";
+import { ButtonLink, ContourLayer, LogoLockup } from "@/components/ui";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { cn } from "@/lib/cn";
 
@@ -145,7 +145,7 @@ export function SiteNav() {
       </div>
 
       {/* Mobile drawer — full-height panel sliding from the inline-end
-          (mirrored in RTL), DarkPanel treatment: navy gradient + bloom + grid.
+          (mirrored in RTL), DarkPanel treatment: navy gradient + bloom + contours.
           Kept mounted for the slide-out; `inert` removes it from the tab order
           while closed. Reduced motion collapses the slide via the global
           transition override. */}
@@ -172,7 +172,7 @@ export function SiteNav() {
             open ? "translate-x-0" : "translate-x-full rtl:-translate-x-full"
           )}
         >
-          <div aria-hidden className="grid-motif pointer-events-none absolute inset-0" />
+          <ContourLayer />
 
           <div className="relative flex items-center justify-between py-2 ps-5 pe-2">
             <LogoLockup size="sm" />

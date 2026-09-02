@@ -171,6 +171,16 @@
     "copyright": "© 2026 MDN GROUP",
     "rights": "All rights reserved"
   },
+  "devTexture": {
+    "title": "Texture lab",
+    "tagline": "The adopted two-tier texture system, at final values, for tuning. Compare at /en/dev/texture and /ar/dev/texture.",
+    "aLabel": "HERO TIER — MERIDIAN ARCS",
+    "aDesc": "Three great-circle arcs as 1px gradient hairlines, the brightest carrying a pulsing destination point. One instance per view: heroes, footer panel, og.jpg.",
+    "bLabel": "SURFACE TIER — TOPOGRAPHY",
+    "bDesc": "Six concentric contour lines at 15%, fading toward the content side. Default on DarkPanel, dark cards, the mobile drawer, and any repeated dark surface.",
+    "panelEyebrow": "DARK PANEL",
+    "statLabel": "average response time"
+  },
   "devUi": {
     "title": "Component library",
     "tagline": "Every shared component and variant, backed by the brand tokens. Review side by side at /en/dev/ui and /ar/dev/ui.",

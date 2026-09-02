@@ -53,7 +53,11 @@ Dark-first product. Deep navy is the canvas; white is text; royal blue is rare a
    rule forbids new BRAND colors (gold, amber, etc.), not neutral shades. */
 ```
 
-- Dark gradient panels: `linear-gradient(160deg, #021d2e 0%, #032b42 100%)` + radial royal-blue blooms + faint 1px grid motif (white @5%).
+- Dark gradient panels: `linear-gradient(160deg, #021d2e 0%, #032b42 100%)` + radial royal-blue blooms + the two-tier texture system below.
+- Texture system (two tiers — NO grid/hatch/repeating patterns, they are retired):
+  - HERO-TIER = `MeridianLayer` (src/components/ui): three great-circle arc hairlines (1px, accent-soft→royal gradient strokes, non-scaling, circle radii larger than the panel) + one small pulsing royal "destination" dot near the bright arc's apex. Exactly ONE instance per view, only on: the landing hero, service detail heroes, the footer panel, and og.jpg.
+  - SURFACE-TIER = `ContourLayer` (src/components/ui): six concentric irregular contour lines (nautical-chart fragment) from the inline-end top corner, 1px white @15%, CSS-masked fade toward the content side. Default on DarkPanel and dark Cards; also the mobile drawer and any repeated dark surface.
+  - Both mirror in RTL via `rtl:-scale-x-100`; the dot pulse (`.pulse-dot`) collapses under prefers-reduced-motion. Tuning reference: `/[locale]/dev/texture`.
 - Shadows: large soft navy-tinted on marketing surfaces (e.g. `0 40px 90px -30px rgba(2,29,46,0.9)`); flat/near-zero in admin UI (Primer-style).
 - Borders: 1px hairlines always.
 - Logo lockup: "MDN" (Space Grotesk 700) + 1px vertical hairline + "TRAVEL" (Space Grotesk 600, letter-spacing 0.26em, lavender on dark).
