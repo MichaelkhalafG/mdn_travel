@@ -5,6 +5,8 @@
     "serviceTitle": "{name} — MDN Travel",
     "requestTitle": "افتح طلبًا — MDN Travel",
     "trackTitle": "تتبع طلبك — MDN Travel",
+    "adminTitle": "الإدارة — MDN Travel",
+    "adminLoginTitle": "تسجيل دخول المشرف — MDN Travel",
     "successTitle": "وصل الطلب — MDN Travel"
   },
   "brand": {
@@ -157,10 +159,67 @@
       "email": "البريد الإلكتروني",
       "password": "كلمة المرور",
       "submit": "تسجيل الدخول",
-      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة."
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+      "rateLimited": "محاولات كثيرة — حاول مرة أخرى بعد دقائق.",
+      "signingIn": "جارٍ تسجيل الدخول…",
+      "panelTitleLine1": "لوحة إدارة",
+      "panelTitleLine2": "طلبات الكونسيرج",
+      "panelBody": "الوصول مقصور على فريق العمليات.",
+      "adminTag": "ADMIN"
+    },
+    "shell": {
+      "adminTag": "ADMIN",
+      "logout": "تسجيل الخروج"
     },
     "dashboard": {
-      "title": "لوحة التحكم"
+      "title": "الطلبات",
+      "statNew": "طلبات جديدة",
+      "statInFlight": "جاري المتابعة",
+      "statAgreements": "اتفاقات هذا الشهر",
+      "searchPlaceholder": "بحث بالكود أو الاسم أو الهاتف…",
+      "allServices": "الخدمة: الكل",
+      "allStatuses": "الحالة: الكل",
+      "apply": "تطبيق",
+      "colCode": "الكود",
+      "colClient": "العميل",
+      "colService": "الخدمة",
+      "colContact": "التواصل",
+      "colStatus": "الحالة",
+      "colDate": "التاريخ",
+      "empty": "لا توجد طلبات مطابقة لهذه الفلاتر.",
+      "emptyHint": "جرّب مسح البحث أو الفلاتر.",
+      "range": "{from}–{to} من {total}",
+      "prev": "السابق",
+      "next": "التالي"
+    },
+    "detail": {
+      "breadcrumb": "الطلبات",
+      "fieldName": "الاسم",
+      "fieldPhone": "الهاتف",
+      "fieldEmail": "البريد",
+      "fieldContact": "التواصل المفضل",
+      "fieldCreated": "تاريخ الطلب",
+      "fieldUpdated": "آخر تحديث",
+      "detailsLabel": "تفاصيل الطلب",
+      "historyTitle": "سجل الحالات",
+      "changeStatus": "تغيير الحالة",
+      "updateStatus": "تحديث الحالة",
+      "confirmTerminal": "هذه حالة نهائية — سيُغلق الطلب كـ «{status}». هل تريد المتابعة؟",
+      "confirm": "تأكيد",
+      "cancel": "إلغاء",
+      "notesTitle": "ملاحظات داخلية",
+      "notesPlaceholder": "أضف ملاحظة داخلية…",
+      "saveNotes": "حفظ الملاحظات",
+      "saving": "جارٍ الحفظ…",
+      "notesSaved": "تم الحفظ",
+      "quickContact": "تواصل سريع",
+      "whatsapp": "واتساب",
+      "call": "اتصال",
+      "sendEmail": "بريد"
+    },
+    "errors": {
+      "unauthorized": "انتهت جلستك — سجّل الدخول مجددًا.",
+      "failed": "حدث خطأ ما — يرجى المحاولة مرة أخرى."
     }
   },
   "errors": {

@@ -41,19 +41,25 @@ function buttonClasses(
 export function Button({
   variant = "primary",
   size = "md",
+  surface = "dark",
   className,
   type = "button",
   ...props
 }: ComponentProps<"button"> & {
   variant?: ButtonVariant;
   size?: ButtonSize;
+  /** Surface the button sits on — picks a legible disabled treatment */
+  surface?: "dark" | "light";
 }) {
   return (
     <button
       type={type}
       className={cn(
         buttonClasses(variant, size, className),
-        "disabled:border-0 disabled:bg-fg-on-dark/6 disabled:text-fg-on-dark/35 disabled:font-medium disabled:animate-none disabled:shadow-none"
+        "disabled:animate-none disabled:shadow-none",
+        surface === "light"
+          ? "disabled:border disabled:border-border-light disabled:bg-canvas-subtle disabled:font-medium disabled:text-mono-label"
+          : "disabled:border-0 disabled:bg-fg-on-dark/6 disabled:font-medium disabled:text-fg-on-dark/35"
       )}
       {...props}
     />

@@ -5,6 +5,8 @@
     "serviceTitle": "{name} — MDN Travel",
     "requestTitle": "Open a request — MDN Travel",
     "trackTitle": "Track your request — MDN Travel",
+    "adminTitle": "Admin — MDN Travel",
+    "adminLoginTitle": "Admin sign in — MDN Travel",
     "successTitle": "Request received — MDN Travel"
   },
   "brand": {
@@ -157,10 +159,67 @@
       "email": "Email",
       "password": "Password",
       "submit": "Sign in",
-      "invalidCredentials": "Invalid email or password."
+      "invalidCredentials": "Invalid email or password.",
+      "rateLimited": "Too many attempts — try again in a few minutes.",
+      "signingIn": "Signing in…",
+      "panelTitleLine1": "Concierge request",
+      "panelTitleLine2": "admin",
+      "panelBody": "Access is restricted to the operations team.",
+      "adminTag": "ADMIN"
+    },
+    "shell": {
+      "adminTag": "ADMIN",
+      "logout": "Sign out"
     },
     "dashboard": {
-      "title": "Dashboard"
+      "title": "Requests",
+      "statNew": "New requests",
+      "statInFlight": "In progress",
+      "statAgreements": "Agreements this month",
+      "searchPlaceholder": "Search by code, name, or phone…",
+      "allServices": "Service: all",
+      "allStatuses": "Status: all",
+      "apply": "Apply",
+      "colCode": "Code",
+      "colClient": "Client",
+      "colService": "Service",
+      "colContact": "Contact",
+      "colStatus": "Status",
+      "colDate": "Date",
+      "empty": "No requests match these filters.",
+      "emptyHint": "Try clearing the search or the filters.",
+      "range": "{from}–{to} of {total}",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "detail": {
+      "breadcrumb": "Requests",
+      "fieldName": "Name",
+      "fieldPhone": "Phone",
+      "fieldEmail": "Email",
+      "fieldContact": "Preferred contact",
+      "fieldCreated": "Created",
+      "fieldUpdated": "Updated",
+      "detailsLabel": "Request details",
+      "historyTitle": "Status history",
+      "changeStatus": "Change status",
+      "updateStatus": "Update status",
+      "confirmTerminal": "This is a terminal state — the request will be closed as \"{status}\". Continue?",
+      "confirm": "Confirm",
+      "cancel": "Cancel",
+      "notesTitle": "Internal notes",
+      "notesPlaceholder": "Add an internal note…",
+      "saveNotes": "Save notes",
+      "saving": "Saving…",
+      "notesSaved": "Saved",
+      "quickContact": "Quick contact",
+      "whatsapp": "WhatsApp",
+      "call": "Call",
+      "sendEmail": "Email"
+    },
+    "errors": {
+      "unauthorized": "Your session expired — sign in again.",
+      "failed": "Something went wrong — please try again."
     }
   },
   "errors": {
