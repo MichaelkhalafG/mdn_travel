@@ -7,9 +7,9 @@ import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { ButtonLink, Card, Eyebrow, MediaImage, MeridianLayer } from "@/components/ui";
 
-// Shells for the 9 seeded slugs; name/desc stay editable data, so the page
-// always renders from the database at request time.
-export const revalidate = 0;
+// Shells for the 9 seeded slugs; name/desc stay editable data — ISR serves
+// cached HTML instantly and picks up admin edits within a minute.
+export const revalidate = 60;
 
 export function generateStaticParams() {
   return serviceSlugs.map((slug) => ({ slug }));

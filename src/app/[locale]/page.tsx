@@ -14,9 +14,12 @@ import {
 } from "@/components/ui";
 import { cn } from "@/lib/cn";
 
-// The services grid is DB-driven (names are editable data) — always render
-// at request time so production never serves a build-frozen grid.
-export const revalidate = 0;
+// The services grid is DB-driven (names are editable data) but changes only
+// when the admin edits — ISR keeps navigation instant while staying fresh
+// within a minute (perf investigation 2026-09-03: full-dynamic bought nothing
+// — the DB is ~1ms — and cost a server render per click plus a hard MariaDB
+// dependency on every navigation).
+export const revalidate = 60;
 
 export default async function HomePage({
   params,

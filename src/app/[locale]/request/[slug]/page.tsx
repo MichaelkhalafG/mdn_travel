@@ -8,7 +8,9 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { Card, Chip, ContourLayer, Eyebrow } from "@/components/ui";
 import { RequestForm } from "./RequestForm";
 
-export const revalidate = 0;
+// Same editable-but-rare service data as the detail page — ISR (submission
+// itself is a server action, unaffected by page caching).
+export const revalidate = 60;
 
 export function generateStaticParams() {
   return serviceSlugs.map((slug) => ({ slug }));
