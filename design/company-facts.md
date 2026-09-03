@@ -71,3 +71,17 @@ Sources: homepage, /about-us/, /contact/, /services/, /investment/.
 ## Arabic version
 - **MISSING** — the site is English-only; no Arabic pages or language switcher
   found. Our own Arabic copy remains our translation (no official phrasing to reuse).
+
+## Reconciliation — applied to our site (2026-09-03)
+- Footer contact defaults are the REAL values (src/lib/company.ts, env-overridable):
+  +966 12 512 4965 / info@mdn.international. Cities line: "Jeddah · Cairo · Dubai".
+- Hero eyebrow: "BY MDN — SINCE 1993" / "من MDN — منذ 1993" — the founding year is
+  attributed to the GROUP, never to the concierge service itself.
+- Footer legal line: "© 2026 MDN Limited" (matches the official footer usage;
+  "MDN GROUP" retired).
+- Landing stat strip uses ONLY verifiable facts: 1993 (founded, Jeddah) · 6
+  (offices: Jeddah, Cairo, Dubai + 3 US) · 9 (our concierge services) · AR · EN
+  (bilingual service). The former "12 years / 4,800 requests / 96% return"
+  figures were design-file inventions and are removed everywhere.
+- Do NOT reintroduce unverifiable metrics or "MDN Group"/"MDN Company Limited"
+  naming — check this file first.

@@ -27,7 +27,7 @@
     "closeMenu": "إغلاق القائمة"
   },
   "home": {
-    "eyebrow": "PRIVATE CONCIERGE",
+    "eyebrow": "من MDN — منذ 1993",
     "heroTitleLine1": "رحلتك تبدأ من هنا…",
     "heroTitleLine2": "ونحن نهتم بكل التفاصيل",
     "heroTagline": "أخبرنا بما تحتاجه، ويتولّى فريق الكونسيرج الترتيب كاملًا — من الإقامة واليخوت حتى الفعاليات الخاصة.",
@@ -45,14 +45,14 @@
     "step2Desc": "نموذج قصير: بياناتك، طريقة التواصل المفضلة، وتفاصيل الطلب.",
     "step3Title": "فريقنا يتواصل معك",
     "step3Desc": "نرتّب كل شيء ونبقى معك حتى انتهاء الخدمة بالكامل.",
-    "stat1Value": "12",
-    "stat1Label": "عامًا من الخدمة الخاصة",
-    "stat2Value": "4,800",
-    "stat2Label": "طلب أُنجز بالكامل",
-    "stat3Value": "6h",
-    "stat3Label": "متوسط زمن الرد",
-    "stat4Value": "96%",
-    "stat4Label": "عملاء يعودون إلينا"
+    "stat1Value": "1993",
+    "stat1Label": "تأسست MDN في جدة",
+    "stat2Value": "6",
+    "stat2Label": "مكاتب حول العالم",
+    "stat3Value": "9",
+    "stat3Label": "خدمات كونسيرج",
+    "stat4Value": "AR · EN",
+    "stat4Label": "خدمة كاملة باللغتين"
   },
   "status": {
     "RECEIVED": "وصل الطلب",
@@ -295,7 +295,7 @@
     "linkFaq": "الأسئلة الشائعة",
     "linkPrivacy": "سياسة الخصوصية",
     "cities": "جدة · القاهرة · دبي",
-    "copyright": "© 2026 MDN GROUP",
+    "copyright": "© 2026 MDN Limited",
     "rights": "جميع الحقوق محفوظة"
   },
   "devTexture": {
@@ -305,8 +305,7 @@
     "aDesc": "ثلاثة أقواس دوائر عظمى كخطوط شعرية متدرّجة بسماكة 1px، أسطعها يحمل نقطة وجهة نابضة. نسخة واحدة لكل شاشة: الأبطال، لوح الفوتر، و og.jpg.",
     "bLabel": "SURFACE TIER — TOPOGRAPHY",
     "bDesc": "ستة خطوط كنتورية متداخلة بنسبة 15% تتلاشى باتجاه جهة المحتوى. الافتراضي على DarkPanel والبطاقات الداكنة وقائمة الجوال وأي سطح داكن متكرر.",
-    "panelEyebrow": "DARK PANEL",
-    "statLabel": "متوسط زمن الرد"
+    "panelEyebrow": "DARK PANEL"
   },
   "devUi": {
     "title": "مكتبة المكوّنات",

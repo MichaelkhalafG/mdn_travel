@@ -27,7 +27,7 @@
     "closeMenu": "Close menu"
   },
   "home": {
-    "eyebrow": "PRIVATE CONCIERGE",
+    "eyebrow": "BY MDN — SINCE 1993",
     "heroTitleLine1": "Your journey starts here…",
     "heroTitleLine2": "we look after every detail",
     "heroTagline": "Tell us what you need — our concierge team arranges it all, from stays and yachts to private events.",
@@ -45,14 +45,14 @@
     "step2Desc": "A short form: your details, preferred contact method, and what you need.",
     "step3Title": "We take it from there",
     "step3Desc": "We arrange everything and stay with you until your service is complete.",
-    "stat1Value": "12",
-    "stat1Label": "years of private service",
-    "stat2Value": "4,800",
-    "stat2Label": "requests completed end to end",
-    "stat3Value": "6h",
-    "stat3Label": "average response time",
-    "stat4Value": "96%",
-    "stat4Label": "clients who return"
+    "stat1Value": "1993",
+    "stat1Label": "MDN founded in Jeddah",
+    "stat2Value": "6",
+    "stat2Label": "offices worldwide",
+    "stat3Value": "9",
+    "stat3Label": "concierge services",
+    "stat4Value": "AR · EN",
+    "stat4Label": "full service in both languages"
   },
   "status": {
     "RECEIVED": "Request received",
@@ -295,7 +295,7 @@
     "linkFaq": "FAQ",
     "linkPrivacy": "Privacy policy",
     "cities": "Jeddah · Cairo · Dubai",
-    "copyright": "© 2026 MDN GROUP",
+    "copyright": "© 2026 MDN Limited",
     "rights": "All rights reserved"
   },
   "devTexture": {
@@ -305,8 +305,7 @@
     "aDesc": "Three great-circle arcs as 1px gradient hairlines, the brightest carrying a pulsing destination point. One instance per view: heroes, footer panel, og.jpg.",
     "bLabel": "SURFACE TIER — TOPOGRAPHY",
     "bDesc": "Six concentric contour lines at 15%, fading toward the content side. Default on DarkPanel, dark cards, the mobile drawer, and any repeated dark surface.",
-    "panelEyebrow": "DARK PANEL",
-    "statLabel": "average response time"
+    "panelEyebrow": "DARK PANEL"
   },
   "devUi": {
     "title": "Component library",

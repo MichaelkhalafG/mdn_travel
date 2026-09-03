@@ -33,7 +33,7 @@ export default async function TexturePage({
       </p>
       <div className="flex items-baseline gap-3">
         <span className="mono text-[34px] text-fg-on-dark">{tHome("stat3Value")}</span>
-        <span className="text-sm text-fg-on-dark/50">{t("statLabel")}</span>
+        <span className="text-sm text-fg-on-dark/50">{tHome("stat3Label")}</span>
       </div>
       <div>
         <Button size="md">{tUi("requestService")}</Button>
