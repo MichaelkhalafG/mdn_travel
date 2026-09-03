@@ -14,6 +14,10 @@ import {
 } from "@/components/ui";
 import { cn } from "@/lib/cn";
 
+// The services grid is DB-driven (names are editable data) — always render
+// at request time so production never serves a build-frozen grid.
+export const revalidate = 0;
+
 export default async function HomePage({
   params,
 }: {
