@@ -4,6 +4,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { formatDateTime } from "@/lib/dates";
 import { normalizePhone } from "@/lib/phone";
+import { sanitizeForDisplay } from "@/lib/sanitize";
 import { Link } from "@/i18n/routing";
 import { StatusBadge, Timeline, type TimelineStep } from "@/components/ui";
 import type { TicketStatusValue } from "@/lib/status";
@@ -93,8 +94,17 @@ export default async function AdminTicketPage({
     }
   }
 
-  // quick contact — wa.me needs the international form of the phone
-  const waPhone = `20${normalizePhone(ticket.phone)}`;
+  // quick contact — hrefs are built ONLY from normalized values (digits /
+  // schema-validated email), URL-encoded so a crafted phone can never break
+  // out of the attribute.
+  const waPhone = encodeURIComponent(`20${normalizePhone(ticket.phone)}`);
+  const telPhone = encodeURIComponent(ticket.phone.replace(/[^\d+]/g, ""));
+
+  // Belt-and-suspenders (see sanitizeForDisplay): the one privileged surface
+  // showing long public free text. React escapes anyway; this must stay
+  // tags-stripped plain text — never an HTML feature.
+  const safeDetails = sanitizeForDisplay(ticket.details);
+  const safeNotes = sanitizeForDisplay(ticket.adminNotes ?? "");
 
   return (
     <div className="flex flex-col gap-5">
@@ -143,14 +153,14 @@ export default async function AdminTicketPage({
             <div className="flex flex-col gap-1.5">
               <span className="text-xs text-fg-on-light-muted">{t("detailsLabel")}</span>
               <p className="text-[15px] leading-[2.1] whitespace-pre-line text-navy">
-                {ticket.details}
+                {safeDetails}
               </p>
             </div>
           </div>
 
           {/* internal notes */}
           <div className={cardClasses}>
-            <NotesEditor ticketId={ticket.id} initialNotes={ticket.adminNotes ?? ""} />
+            <NotesEditor ticketId={ticket.id} initialNotes={safeNotes} />
           </div>
         </div>
 
@@ -177,7 +187,7 @@ export default async function AdminTicketPage({
               >
                 {t("whatsapp")}
               </a>
-              <a href={`tel:${ticket.phone.replace(/[^\d+]/g, "")}`} className={contactLinkClasses}>
+              <a href={`tel:${telPhone}`} className={contactLinkClasses}>
                 {t("call")}
               </a>
               {ticket.email ? (

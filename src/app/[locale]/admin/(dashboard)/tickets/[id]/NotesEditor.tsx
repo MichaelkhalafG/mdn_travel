@@ -42,7 +42,7 @@ export function NotesEditor({
       <Textarea
         label={t("admin.detail.notesTitle")}
         rows={4}
-        maxLength={5000}
+        maxLength={4000}
         placeholder={t("admin.detail.notesPlaceholder")}
         value={notes}
         onChange={(e) => setNotes(e.target.value)}

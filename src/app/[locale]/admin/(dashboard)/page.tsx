@@ -4,6 +4,7 @@ import type { Prisma } from "@prisma/client";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { formatShortDate } from "@/lib/dates";
+import { sanitizeText } from "@/lib/sanitize";
 import { Link } from "@/i18n/routing";
 import { StatusBadge } from "@/components/ui";
 import { TICKET_STATUSES, type TicketStatusValue } from "@/lib/status";
@@ -36,7 +37,9 @@ export default async function AdminOverviewPage({
   const status = TICKET_STATUSES.includes(sp.status as TicketStatusValue)
     ? (sp.status as TicketStatusValue)
     : "";
-  const q = (sp.q ?? "").trim();
+  // search term: sanitized (control/bidi strip) and capped — it's a filter,
+  // used only as a Prisma `contains` parameter (always parameterized)
+  const q = sanitizeText(sp.q ?? "").slice(0, 100);
   const page = Math.max(1, Number.parseInt(sp.page ?? "1", 10) || 1);
 
   const t = await getTranslations("admin.dashboard");

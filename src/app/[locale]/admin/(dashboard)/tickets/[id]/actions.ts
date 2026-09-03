@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { adminNotesSchema } from "@/lib/schemas";
 import { TICKET_STATUSES, type TicketStatusValue } from "@/lib/status";
 
 // Every action re-checks the session server-side — middleware alone is never
@@ -39,11 +40,12 @@ export async function saveAdminNotes(
 ): Promise<ActionResult> {
   const session = await auth();
   if (!session?.user) return { ok: false, error: "admin.errors.unauthorized" };
-  if (notes.length > 5000) return { ok: false, error: "admin.errors.failed" };
+  const parsed = adminNotesSchema.safeParse(notes);
+  if (!parsed.success) return { ok: false, error: "errors.tooLong" };
   try {
     await prisma.ticket.update({
       where: { id: ticketId },
-      data: { adminNotes: notes.trim() || null },
+      data: { adminNotes: parsed.data || null },
     });
   } catch {
     return { ok: false, error: "admin.errors.failed" };

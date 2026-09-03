@@ -71,6 +71,7 @@ export function RequestForm({ serviceSlug }: { serviceSlug: string }) {
         <Input
           label={t("request.fullName")}
           name="fullName"
+          maxLength={120}
           autoComplete="name"
           placeholder={t("request.fullNamePlaceholder")}
           value={values.fullName}
