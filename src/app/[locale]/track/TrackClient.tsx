@@ -15,6 +15,7 @@ import {
 } from "@/components/ui";
 import { trackSchema, type TrackInput } from "@/lib/schemas";
 import type { TicketStatusValue } from "@/lib/status";
+import { CONTACT } from "@/lib/company";
 import { trackTicket, type TrackResult, type TrackTicketResult } from "./actions";
 
 type FieldErrors = Partial<Record<keyof TrackInput, string>>;
@@ -194,7 +195,7 @@ export function TrackClient() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <span className="text-sm text-fg-on-dark/50">{t("track.helpText")}</span>
               <a
-                href={`mailto:${t("footer.email")}`}
+                href={`mailto:${CONTACT.email}`}
                 className="inline-flex items-center justify-center rounded-brand border border-fg-on-dark/22 px-6 py-3 text-sm text-fg-on-dark outline-none transition-colors hover:border-fg-on-dark/40 focus-visible:ring-[3px] focus-visible:ring-accent/40"
               >
                 {t("track.helpCta")}

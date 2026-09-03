@@ -91,6 +91,12 @@ export function SiteNav() {
       label: t("track"),
       active: pathname.startsWith("/track"),
     },
+    {
+      key: "about",
+      href: "/about",
+      label: t("about"),
+      active: pathname.startsWith("/about"),
+    },
   ] as const;
 
   const close = () => setOpen(false);
@@ -115,9 +121,6 @@ export function SiteNav() {
               {link.label}
             </Link>
           ))}
-          <a href="#" className={cn("text-[15px]", navLinkClass(false))}>
-            {t("about")}
-          </a>
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
@@ -201,13 +204,6 @@ export function SiteNav() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="#"
-              onClick={close}
-              className={cn("text-[21px]", navLinkClass(false))}
-            >
-              {t("about")}
-            </a>
           </nav>
 
           <div className="relative flex flex-col items-start gap-6 px-6 pt-6 pb-[calc(1.5rem_+_env(safe-area-inset-bottom))]">

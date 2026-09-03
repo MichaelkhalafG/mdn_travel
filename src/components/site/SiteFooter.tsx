@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Eyebrow, LogoLockup, MeridianLayer } from "@/components/ui";
+import { CONTACT } from "@/lib/company";
 
 const itemClass =
   "text-sm text-fg-on-dark/62 transition-colors hover:text-fg-on-dark";
@@ -42,23 +43,32 @@ export function SiteFooter() {
             <Link href="/track" className={itemClass}>
               {t("linkTrack")}
             </Link>
-            <a href="#" className={itemClass}>
+            <Link href="/about" className={itemClass}>
               {t("linkAbout")}
-            </a>
-            <a href="#" className={itemClass}>
+            </Link>
+            <Link href="/faq" className={itemClass}>
               {t("linkFaq")}
-            </a>
-            <a href="#" className={itemClass}>
+            </Link>
+            <Link href="/privacy" className={itemClass}>
               {t("linkPrivacy")}
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-col gap-3.5">
             <Eyebrow>{t("colContact")}</Eyebrow>
-            <span className="mono text-sm text-fg-on-dark/62" dir="ltr">
-              {t("phone")}
-            </span>
-            <span className="mono text-sm text-fg-on-dark/62">{t("email")}</span>
+            <a
+              href={`tel:${CONTACT.phone.replace(/[^\d+]/g, "")}`}
+              className="mono rounded-brand text-sm text-fg-on-dark/62 outline-none transition-colors hover:text-fg-on-dark focus-visible:ring-[3px] focus-visible:ring-accent/40"
+              dir="ltr"
+            >
+              {CONTACT.phone}
+            </a>
+            <a
+              href={`mailto:${CONTACT.email}`}
+              className="mono rounded-brand text-sm text-fg-on-dark/62 outline-none transition-colors hover:text-fg-on-dark focus-visible:ring-[3px] focus-visible:ring-accent/40"
+            >
+              {CONTACT.email}
+            </a>
             <span className="text-sm text-fg-on-dark/62">{t("cities")}</span>
           </div>
         </div>
