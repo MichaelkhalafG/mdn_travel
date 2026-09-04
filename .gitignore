@@ -11,14 +11,21 @@ next-env.d.ts
 
 # misc
 .DS_Store
+Thumbs.db
 *.pem
 
-# debug
+# logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# env files — never commit .env
+# editors / IDEs
+/.vscode/
+/.idea/
+*.swp
+
+# env files — never commit .env or any variant except the example
 .env
 .env.*
 !.env.example
@@ -31,3 +38,6 @@ yarn-error.log*
 
 # original unoptimized assets (kept locally as source, not committed)
 /public/img/_unused/
+
+# stray local scratch files
+*.tmp.js

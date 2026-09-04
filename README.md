@@ -1,7 +1,8 @@
 # MDN Travel
 
-Luxury concierge & booking-request platform by MDN. See `design/CLAUDE.md` for the
-full product spec, brand tokens, and working rules.
+Luxury concierge & booking-request platform by MDN. See `CLAUDE.md` for the full
+product spec, brand tokens, and working rules, and `DEPLOY.md` for the Hostinger
+production runbook.
 
 ## Stack
 
@@ -47,5 +48,8 @@ Open http://localhost:3000 — `/` redirects to `/en`; Arabic lives at `/ar`.
 
 ## Deployment
 
-Hostinger Node.js Web Apps via GitHub integration. `next.config.ts` uses
-`output: "standalone"`. Production `DATABASE_URL` points at Hostinger's managed MySQL.
+Hostinger Node.js Web Apps via GitHub integration — see **`DEPLOY.md`** for the
+full step-by-step runbook (subdomain, Git import, MySQL, env vars, first-deploy
+migrate/seed, SSL). `next.config.ts` uses `output: "standalone"`; `npm run build`
+copies static assets into the standalone tree and `npm start` runs
+`.next/standalone/server.js` (binds `0.0.0.0`, respects `PORT`).

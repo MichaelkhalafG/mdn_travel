@@ -2,14 +2,21 @@
   "name": "mdn-travel",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "postbuild": "node scripts/postbuild-standalone.mjs",
+    "start": "node .next/standalone/server.js",
     "lint": "eslint src",
     "postinstall": "prisma generate",
     "db:push": "prisma db push",
-    "db:seed": "prisma db seed"
+    "db:seed": "prisma db seed",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "seed:services": "tsx prisma/seed-services.ts",
+    "create-admin": "tsx prisma/create-admin.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
