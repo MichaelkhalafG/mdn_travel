@@ -1,4 +1,4 @@
-// The 9 seeded services (CLAUDE.md). Single source shared by the full dev
+// The 9 seeded services (docs/PROJECT.md). Single source shared by the full dev
 // seed (seed.ts) and the production-safe seed:services script.
 export const services = [
   {

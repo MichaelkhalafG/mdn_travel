@@ -85,6 +85,7 @@ DATABASE_URL=mysql://DBUSER:DBPASSWORD@localhost:3306/DBNAME
 AUTH_SECRET=<output of: npx auth secret>
 AUTH_URL=https://travel.mdneg.com
 AUTH_TRUST_HOST=true
+NEXT_PUBLIC_SITE_URL=https://travel.mdneg.com
 ADMIN_EMAIL=ops@mdn.travel
 ADMIN_PASSWORD=<a strong password>
 NEXT_PUBLIC_CONTACT_PHONE=+966 12 512 4965
@@ -95,6 +96,8 @@ NODE_ENV=production
 - `AUTH_URL` **must** be the real `https://travel.mdneg.com` or admin sign-in
   callbacks break.
 - `AUTH_TRUST_HOST=true` lets Auth.js trust the proxied host header.
+- `NEXT_PUBLIC_SITE_URL` is the canonical origin used as `metadataBase`, so OG /
+  Twitter image URLs are absolute (not `localhost`) in production.
 - `ADMIN_EMAIL` / `ADMIN_PASSWORD` are the only admin login — keep them strong
   and private.
 - Do **not** set `PRISMA_LOG` in production.

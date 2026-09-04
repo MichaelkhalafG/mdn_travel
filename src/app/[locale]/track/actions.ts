@@ -7,7 +7,7 @@ import { normalizePhone } from "@/lib/phone";
 import { trackSchema, type TrackInput } from "@/lib/schemas";
 import type { TicketStatusValue } from "@/lib/status";
 
-// SECURITY (per CLAUDE.md): a ticket is returned ONLY when BOTH the code and
+// SECURITY (per docs/PROJECT.md): a ticket is returned ONLY when BOTH the code and
 // the phone match, and a wrong phone returns the exact same "notFound" as a
 // nonexistent code — the response never reveals that a code exists. The
 // result carries ONLY service name, reference code, and the status history:

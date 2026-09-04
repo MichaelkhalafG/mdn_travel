@@ -41,3 +41,9 @@ yarn-error.log*
 
 # stray local scratch files
 *.tmp.js
+
+# local pointer to the project spec (docs/PROJECT.md is the tracked source)
+/CLAUDE.md
+
+# local editor/assistant settings (personal, not shared)
+/.claude/settings.local.json

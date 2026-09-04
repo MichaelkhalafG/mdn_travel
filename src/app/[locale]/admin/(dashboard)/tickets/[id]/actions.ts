@@ -21,7 +21,7 @@ export async function changeTicketStatus(
     return { ok: false, error: "admin.errors.failed" };
   }
   try {
-    // status change + its StatusEvent are one transaction (CLAUDE.md: every
+    // status change + its StatusEvent are one transaction (docs/PROJECT.md: every
     // change creates an event)
     await prisma.$transaction([
       prisma.ticket.update({ where: { id: ticketId }, data: { status } }),

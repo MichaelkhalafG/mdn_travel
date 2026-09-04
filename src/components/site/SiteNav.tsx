@@ -42,6 +42,7 @@ export function SiteNav() {
   // cleanup restores scroll and returns focus to the hamburger
   useEffect(() => {
     if (!open) return;
+    const toggle = toggleRef.current;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     closeRef.current?.focus();
@@ -73,7 +74,7 @@ export function SiteNav() {
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", onKeyDown);
-      toggleRef.current?.focus();
+      toggle?.focus();
     };
   }, [open]);
 

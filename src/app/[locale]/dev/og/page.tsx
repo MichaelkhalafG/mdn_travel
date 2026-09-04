@@ -3,7 +3,7 @@ import { LogoLockup, MeridianLayer } from "@/components/ui";
 
 // og.jpg generator: renders the 1200×630 social card at the page's top-left
 // corner for browser capture (screenshot the [0,0,1200,630] region, re-encode
-// with sharp to public/og.jpg). Hero-tier meridian treatment per CLAUDE.md.
+// with sharp to public/og.jpg). Hero-tier meridian treatment per docs/PROJECT.md.
 export default async function OgPage({
   params,
 }: {

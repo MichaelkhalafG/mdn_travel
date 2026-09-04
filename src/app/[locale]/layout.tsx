@@ -18,6 +18,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
   return {
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL ?? "https://travel.mdneg.com",
+    ),
     title: t("title"),
     description: t("description"),
     openGraph: {

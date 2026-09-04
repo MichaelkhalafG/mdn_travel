@@ -1,4 +1,4 @@
-// The 9 seeded service slugs (CLAUDE.md). Used for generateStaticParams —
+// The 9 seeded service slugs (docs/PROJECT.md). Used for generateStaticParams —
 // names/descriptions still come from the database at request time.
 export const serviceSlugs = [
   "hotels-resorts",

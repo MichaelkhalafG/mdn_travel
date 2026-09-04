@@ -1,8 +1,8 @@
 # MDN Travel
 
-Luxury concierge & booking-request platform by MDN. See `CLAUDE.md` for the full
-product spec, brand tokens, and working rules, and `DEPLOY.md` for the Hostinger
-production runbook.
+Luxury concierge & booking-request platform by MDN. See `docs/PROJECT.md` for the
+full product spec, brand tokens, and working rules, and `DEPLOY.md` for the
+Hostinger production runbook.
 
 ## Stack
 
